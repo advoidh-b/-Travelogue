@@ -1,5 +1,7 @@
 # Travelogue??
 
+Author: Advoidh B (advoidh-b)
+
 Personal demo project; non-commercial; All rights reserved.
 
 Glossary (strange acronyms i use in commit messages and pull requests): 
