@@ -1,0 +1,41 @@
+/* 
+* author: AdvoidhB
+* for: "Travelogue. TM"
+* date: 20-aug-2022
+*/
+* {
+    box-sizing: border-box;
+  }
+  ::-webkit-scrollbar, ::-moz-scrollbar, ::scrollbar {
+    opacity: 0;
+    display: none;
+  }
+  :root {
+    --bg: #f4f1f1;
+    --cardbg: #f8f7f8;
+    --defcol: #05445e;
+    --textcol: #757785;
+    --f-white: #fffeff;
+    --bg-white: #fefefe;
+    --sub-white: #efefff;
+    
+    --deffont: "Figtree", sans-serif;
+  }
+  /* material icons fix */
+  .mi-n {
+    padding-top: 3.6px;
+  }
+  body {
+    font: 400 14px var(--deffont);
+    background: var(--bg);
+    color: var(--textcol);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    padding: 0.6rem 2.2rem;
+    margin-top: 0;
+    background: var(--bg-white);
+    box-shadow: 0px 2px 10px rgba(100, 100, 100, 0.1);
+  }
