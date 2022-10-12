@@ -1,4 +1,5 @@
 <?php
+include("config.php");
     $email = $_GET["email"];
     $password = $_GET["password"];
 
