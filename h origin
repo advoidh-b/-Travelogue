@@ -1,0 +1,13 @@
+[1mdiff --git a/css/signup.css b/css/signup.css[m
+[1mindex 952ef51..8ca76fd 100644[m
+[1m--- a/css/signup.css[m
+[1m+++ b/css/signup.css[m
+[36m@@ -46,7 +46,7 @@[m
+     padding: 10px 20px;[m
+     margin: 0 auto 0.8rem;[m
+   }[m
+[31m-  .create-acc-btn {[m
+[32m+[m[32m  .create-acc-btn {[m[41m [m
+     min-width: 60%;[m
+     max-width: 60%;[m
+     margin: auto;[m
