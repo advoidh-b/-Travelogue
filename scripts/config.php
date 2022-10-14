@@ -1,10 +1,6 @@
 <?php
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "db1";
-$tablename = "tb_register"
-$conn = new mysqli('localhost', 'root', '', '', 'db1');
-
+/** global server params */
+$sql_servername = "localhost";
+$sql_user = "root";
+$sql_password = "";
 ?>
