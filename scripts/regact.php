@@ -2,7 +2,7 @@
 
 include('config.php');
 
-if (isset($_POST['signup'])) {
+if (isset($_POST['signup'])) { //the button
     $name=$_POST['username'];
     $email=$_POST['email'];
     $password=$_POST['password'];
