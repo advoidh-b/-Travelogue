@@ -198,6 +198,7 @@ div.cards-container {
 div.cards {
   background: #00000000;
   width: 28%;
+  max-height: 300px;
   position: relative;
   margin-bottom: 0.8rem;
 }
@@ -289,14 +290,11 @@ div.news-c-t > h1 {
 div.news-content-1 {
   width: 100%;
   padding: 0 2rem;
-  background-image: url(./images/news-img-2.jpeg);
-  background-size: cover;
-  background-position: center;
+  background: lime url(./images/new-img1.jpeg) center fixed cover no-repeat;
   flex-flow: column wrap;
   justify-content: center;
   max-height: 400px;
   min-height: 340px;
-  width: 100%;
 }
 .loc-det-cont {
   width: 44%;
@@ -336,6 +334,7 @@ i.loc-ico {
   display: flex;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
 }
 a.gallery-link {
   width: 150px;
@@ -393,15 +392,6 @@ div.contact {
   margin-right: 0.2rem;
 }
 /* .contact-links > a {} */
-/* beta */
-input.ip-txt, #submit {
-  margin: auto;
-  padding: 10px 20px;
-  border: 1px solid #333;
-  display: block;
-  min-width: 260px;
-  max-width: 260px;
-}
 @media (max-width: 670px) {
   .mic-n {
     font-size: 1.4rem;
@@ -456,6 +446,7 @@ div.cards-container {
 }
 div.cards {
   width: 100%;
+  max-height: 300px;
 }
 div.loc-details > p {
   font: 600 1rem var(--deffont);
