@@ -154,22 +154,20 @@ div.search {
 input.srch-bar {
   padding: 0.6rem 1.2rem;
   min-width: 80%;
-  background: var(--bg);
+  background: var(--f-white);
   font: 400 1rem var(--deffont);
   color: var(--textcol);
-  border: 2px solid #189ab4;
 }
 input.srch-bar, button.srch-sub {
   min-height: 48px;
   max-height: 48px;
-  
+  border: none;
 }
 input.srch-bar::placeholder {
   font-size: 1rem;
-  color: #189ab4;
+  color: #bbc;
 }
 button.srch-sub {
-  border: none;
   padding: 0.4rem;
   margin-left: 0.2rem;
   min-width: 48px;
@@ -296,8 +294,8 @@ div.news-content-1 {
   justify-content: center;
   max-height: 400px;
   min-height: 340px;
-  width: 100%;
 }
+
 .loc-det-cont {
   width: 44%;
   margin-bottom: 0.8rem;
@@ -332,14 +330,14 @@ i.loc-ico {
 }
 .img-cont {
   width: 100%;
-  height: auto;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   position: relative;
 }
-a.gallery-link {
-  width: 150px;
-  height: 150px;
+.gallery-link {
+  width: 100px;
+  height: 100px;
   justify-content: center;
   font-size: 1.2rem;
   background: #11111160;
@@ -354,8 +352,8 @@ mi-img {
   font-size: 2.2rem;
 }
 .img-cont > img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   opacity: 0.9;
 }
 footer {
@@ -369,7 +367,7 @@ div.contact {
 }
 .social-links, .contact-links {
   width: 48%;
-  background: none;
+  background: hotpink;
   display: flex;
   align-items: center;
 }
@@ -392,15 +390,8 @@ div.contact {
 .foot-ic {
   margin-right: 0.2rem;
 }
-/* .contact-links > a {} */
-/* beta */
-input.ip-txt, #submit {
-  margin: auto;
-  padding: 10px 20px;
-  border: 1px solid #333;
-  display: block;
-  min-width: 260px;
-  max-width: 260px;
+.contact-links > a {
+  
 }
 @media (max-width: 670px) {
   .mic-n {
@@ -445,6 +436,7 @@ input.srch-bar {
 button.srch-sub {
   padding: 0.6rem;
   width: 42px;
+  
   height: 42px;
 }
 section.sec-2 {
@@ -485,14 +477,6 @@ div.news-content-1 {
 .loc-det-cont, .gallery-cont {
   width: 100%;
   padding: 0 1.6rem;
-}
-.img-cont {
-  width: 100%;
-  overflow: hidden;
-}
-.img-cont > img, a.gallery-link {
-  max-width: 90px;
-  max-height: 90px;
 }
 footer {
   padding: 1.6rem 1rem;
