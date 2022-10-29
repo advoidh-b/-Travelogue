@@ -13,13 +13,23 @@
     }
     else
     {
+        $squery = ("insert into tb_user (fullname, username, email, password) values ('$fullname','$username','$email','$password')");
+
+        if($conn->query($squery)) {
+            echo "Insertion Sucessful";
+        }
+        else {
+            echo "Error:  ".$conn->error;
+        }
     /* insert values to respective table attrib */
-    $squery = $conn->prepare("insert into tb_user(fullname, username, email, password) values (?,?,?,?)");
+    /* ** LEGACY CODE ** 
+    $squery = ("insert into tb_user(fullname, username, email, password) values (?,?,?,?)");
     $squery->bind_param("ssss", $fullname, $username, $email, $password);
     $squery->execute();
     echo "Connection successful. Check sql panel to verify";
     // close connection after
-    $squery->close();
+    */
+    $conn->close();
     }
 
 ?>
