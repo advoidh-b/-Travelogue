@@ -154,24 +154,25 @@ div.search {
 input.srch-bar {
   padding: 0.6rem 1.2rem;
   min-width: 80%;
-  background: var(--f-white);
+  background: none;
   font: 400 1rem var(--deffont);
   color: var(--textcol);
+  border: 0.8px solid var(--defcol);
 }
 input.srch-bar, button.srch-sub {
   min-height: 48px;
   max-height: 48px;
-  border: none;
+  
 }
 input.srch-bar::placeholder {
   font-size: 1rem;
-  color: #bbc;
+  color: var(--textcol);
 }
 button.srch-sub {
   padding: 0.4rem;
   margin-left: 0.2rem;
   min-width: 48px;
-  background: #189ab4;
+  background: var(--defcol);
   color: var(--sub-white);
   border: none;
 }
@@ -224,11 +225,11 @@ div.loc-details {
   color: #fefeff;
 }
 div.loc-details > p, div.loc-details > span {
-  text-shadow: 1px 2px 8px rgba(1, 1, 1, 0.6);
+  text-shadow: -1px 2px 8px rgba(1, 1, 1, 0.6);
 }
 div.loc-details > p {
   color: var(--defcol);
-  font: 600 0.8rem var(--deffont);
+  font: 500 1rem var(--deffont);
   margin: 0 0 0.2rem;
   color: #fafafa;
 }
@@ -287,7 +288,7 @@ div.news-c-t > h1 {
 div.news-content-1 {
   width: 100%;
   padding: 0 2rem;
-  background-image: url(./images/news-img-2.jpeg);
+  background-image: url(../images/news-img-2.jpeg);
   background-size: cover;
   background-position: center;
   flex-flow: column wrap;
@@ -308,7 +309,7 @@ div.news-content-1 {
   color: var(--bg-white);
   padding: 10px 28px;
   width: 100%;
-  background: #11111140;
+  background: #11111160;
 }
 #loc-city {
   font-size: 1.4rem;
@@ -325,19 +326,27 @@ i.loc-ico {
   font-size: 2.6rem;
   color: var(--f-white);
 }
+
 .gallery-cont {
   width: 44%;
 }
-.img-cont {
+div.img-cont {
   width: 100%;
-  height: 100px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
+}
+div.img-cont > img {
+  max-width: 160px;
+  max-height: 160px;
+  height: 160px;
+  width: 160px;
 }
 .gallery-link {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   justify-content: center;
   font-size: 1.2rem;
   background: #11111160;
@@ -351,11 +360,7 @@ i.loc-ico {
 mi-img {
   font-size: 2.2rem;
 }
-.img-cont > img {
-  width: 100px;
-  height: 100px;
-  opacity: 0.9;
-}
+
 footer {
   background: #11171F;
   padding: 1.6rem 2rem;
@@ -391,7 +396,7 @@ div.contact {
   margin-right: 0.2rem;
 }
 .contact-links > a {
-  
+  font-size: inherit;
 }
 @media (max-width: 670px) {
   .mic-n {
@@ -473,6 +478,12 @@ div.news-content-1 {
   padding: 0;
   flex-flow: column wrap;
   justify-content: center;
+}
+div.img-cont > img, .gallery-link {
+  max-width: 120px;
+  max-height: 120px;
+  height: 120px;
+  width: 120px;
 }
 .loc-det-cont, .gallery-cont {
   width: 100%;
