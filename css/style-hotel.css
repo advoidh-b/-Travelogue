@@ -455,7 +455,7 @@ div.cards {
   width: 100%;
 }
 div.loc-details > p {
-  font: 600 1rem var(--deffont);
+  font: 600 1rem def;
 }
 div.loc-details > span {
   font-size: 0.8rem;
