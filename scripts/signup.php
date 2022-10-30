@@ -21,14 +21,7 @@
         else {
             echo "Error:  ".$conn->error;
         }
-    /* insert values to respective table attrib */
-    /* ** LEGACY CODE ** 
-    $squery = ("insert into tb_user(fullname, username, email, password) values (?,?,?,?)");
-    $squery->bind_param("ssss", $fullname, $username, $email, $password);
-    $squery->execute();
-    echo "Connection successful. Check sql panel to verify";
-    // close connection after
-    */
+
     $conn->close();
     }
 
