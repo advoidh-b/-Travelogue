@@ -23,11 +23,11 @@
   body {
     display: grid;
     grid-template: "head head head" 10vh
-    "sec1 sec1 sec1" 90vh
-    "foot foot foot" auto / 
+    "sec1 sec1 sec1" 80vh
+    "foot foot foot" 10vh / 
     auto auto auto;
     font: 400 14px var(--deffont);
-    background-image: url(../images/range1.jpeg);
+    background-image: url(../images/hero-img.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -57,9 +57,9 @@
     color: #1add9f;
   }
   a.logo {
-    font: 100 16pt var(--deffont);
+    font: 600 20pt var(--deffont);
     text-decoration: none;
-    color: var(--defcol);
+    color: var(--f-white);
   }
   div.nav-profile {
     display: flex;
@@ -75,7 +75,7 @@
   }
   .avatar-ico {
     transform: scale(2.2);
-    color: var(--textcol);
+    color: var(--sub-white);
   }
   .avatar > img {
     width: 46px;
@@ -102,6 +102,7 @@
   .intro-h {
     font: 600 3.2rem var(--deffont);
     color: var(--f-white);
+    text-shadow: 1px 1px 10px #11111180;
     text-align: left;
     margin: 0 0 1.6rem;
   }
@@ -112,18 +113,52 @@
     margin: 0 0 1.6rem;
   }
   .intro-cta {
-  display: block;
-  max-width: 38%;
+  display: flex;
+  align-items: center;
+  max-width: 32%;
   font: 500 1rem var(--deffont);
   text-decoration: none;
-  padding: 14px 20px;
+  padding: 12px 26px;
   background: var(--defcol);
   color: var(--sub-white);
   border: none;
   }
+  .link-txt {
+    background: none;
+  }
+  .mi-arrow {
+    background: none;
+  }
   footer {
     grid-area: foot;
-    background: #000;
+    background: #00000000;
+  }
+  footer, div.contact, div.social-links, div.contact-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  div.social-links {
+    justify-content: space-between;
+  }
+  div.contact-links {
+    justify-content: space-between;
+   }
+   div.social-links > a, div.contact-links > a {
+    padding: 0.6rem;
+    text-decoration: none;
+    color: var(--sub-white);
+    display: flex;
+    align-items: center;
+  }
+  .fab {
+    font-size: 1.4rem;
+  }
+  .foot-ic {
+    margin-right: 0.2rem;
+  }
+  .contact-links > a {
+    font-size: inherit;
   }
   /* flexset 1 end */
 @media (max-width: 700px) {
@@ -135,9 +170,9 @@
 
     body {
     display: grid;
-    grid-template: "head head head" 10vh
-    "sec1 sec 1 sec1" 90vh
-    "foot foot foot" auto / 
+    grid-template: "head head head" 8vh
+    "sec1 sec 1 sec1" 86vh
+    "foot foot foot" 8vh / 
     auto auto auto;
     }
     
@@ -169,6 +204,8 @@
       .intro-cta {
         margin: auto;
         min-width: 100%;
+        padding: 10px 20px;
+        justify-content: center;
       }
       footer {
       }  
