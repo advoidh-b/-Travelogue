@@ -372,7 +372,7 @@ div.contact {
 }
 .social-links, .contact-links {
   width: 48%;
-  background: hotpink;
+  background: none;
   display: flex;
   align-items: center;
 }

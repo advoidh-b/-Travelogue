@@ -86,6 +86,40 @@
   section.sec1 {
     grid-area: sec1;
     background: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2rem 0;
+  }
+  div.intro-div {
+    color: var(--f-white);
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    width: 60%;
+  }
+  
+  .intro-h {
+    font: 600 3.2rem var(--deffont);
+    color: var(--f-white);
+    text-align: left;
+    margin: 0 0 1.6rem;
+  }
+  .intro-p {
+    font-size: 1rem;
+    color: var(--sub-white);
+    padding: 0;
+    margin: 0 0 1.6rem;
+  }
+  .intro-cta {
+  display: block;
+  max-width: 38%;
+  font: 500 1rem var(--deffont);
+  text-decoration: none;
+  padding: 14px 20px;
+  background: var(--defcol);
+  color: var(--sub-white);
+  border: none;
   }
   footer {
     grid-area: foot;
@@ -105,7 +139,6 @@
     "sec1 sec 1 sec1" 90vh
     "foot foot foot" auto / 
     auto auto auto;
-    background: var(--bg) url(images/range1.jpeg) center fixed cover no-repeat;
     }
     
     header {
@@ -121,6 +154,21 @@
         min-width: auto;
       }
       section.sec1 {
+        width: 100%;
+      }
+      div.intro-div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+      .intro-h {
+        font-size: 2.8rem;
+        text-align: center;
+      }
+      .intro-cta {
+        margin: auto;
+        min-width: 100%;
       }
       footer {
       }  
