@@ -132,12 +132,16 @@
   footer {
     grid-area: foot;
     background: #00000000;
+    padding: 0.6rem 2rem;
   }
   footer, div.contact, div.social-links, div.contact-links {
     display: flex;
     align-items: center;
   }
-  
+  div.contact {
+    justify-content: space-between;
+    width: 100%;
+  }
   div.social-links {
     justify-content: space-between;
   }
@@ -208,5 +212,6 @@
         justify-content: center;
       }
       footer {
+
       }  
     }
