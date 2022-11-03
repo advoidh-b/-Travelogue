@@ -74,7 +74,7 @@
     justify-content: center;
   }
   .avatar-ico {
-    transform: scale(2.2);
+    transform: scale(2.0);
     color: var(--sub-white);
   }
   .avatar > img {
@@ -82,6 +82,46 @@
     height: 46px;
     border-radius: 50%;
     display: none;
+  }
+  aside.sidebar {
+    position: fixed;
+    right: 0;
+    z-index: 99;
+    height: 100vh;
+    width: 32%;
+    background: var(--bg-white);
+    display: flex;
+    align-items: center;
+  }
+  div.sidebar-form-cont {
+    width: 100%;
+    min-height: 200px;
+    background: tan;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+  }
+  form.sidebar-form {
+    display: flex;
+    max-width: 220px;
+    width: auto;
+    justify-content: center;
+    flex-flow: column wrap;
+  }
+  form.sidebar-form > label {
+    display: block;
+  }
+  .ip-text {
+    font: 400 1rem var(--deffont);
+    padding: 8px 20px;
+    margin: 0 auto 1.2rem;
+    max-width: 220px;
+    display: block;
+  }
+  .ip-login {
+    display: block;
+    padding: 8px 20px;
+    max-width: 220px;
   }
   section.sec1 {
     grid-area: sec1;
@@ -96,7 +136,7 @@
     padding: 0;
     display: flex;
     flex-flow: column wrap;
-    width: 60%;
+    width: 68%;
   }
   
   .intro-h {
@@ -112,16 +152,18 @@
     padding: 0;
     margin: 0 0 1.6rem;
   }
-  .intro-cta {
+  a.intro-cta {
   display: flex;
   align-items: center;
-  max-width: 32%;
-  font: 500 1rem var(--deffont);
+  justify-content: center;
+  max-width: 36%;
+  font: 400 1rem var(--deffont);
   text-decoration: none;
   padding: 12px 26px;
   background: var(--defcol);
   color: var(--sub-white);
   border: none;
+  box-shadow: 2px 2px 10px #11111150;
   }
   .link-txt {
     background: none;
@@ -142,13 +184,12 @@
     justify-content: space-between;
     width: 100%;
   }
-  div.social-links {
+  div.social-links, div.contact-links {
     justify-content: space-between;
   }
-  div.contact-links {
-    justify-content: space-between;
-   }
-   div.social-links > a, div.contact-links > a {
+
+  div.social-links > a,
+  div.contact-links > a {
     padding: 0.6rem;
     text-decoration: none;
     color: var(--sub-white);
@@ -192,6 +233,13 @@
       div.logo-container {
         min-width: auto;
       }
+      aside.sidebar {
+        width: 100%;
+      }
+      div.sidebar-form-cont {
+        width: 100%;
+      }
+      
       section.sec1 {
         width: 100%;
       }
@@ -205,13 +253,24 @@
         font-size: 2.8rem;
         text-align: center;
       }
-      .intro-cta {
+      .intro-p {
+        font-size: 0.8rem;
+      }
+      a.intro-cta {
         margin: auto;
         min-width: 100%;
         padding: 10px 20px;
         justify-content: center;
       }
       footer {
-
+        background: none;
       }  
+    }
+    /*  Tablets and landscape modes */
+    @media screen and (min-width: 556px) and (max-width: 992px) {
+
+      
+      a.intro-cta {
+        max-width: 50%;
+      }
     }
