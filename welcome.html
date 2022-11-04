@@ -24,7 +24,7 @@
             </div>
             <div class="nav-profile">
             
-            <div class="avatar">
+            <div class="avatar" onclick="navOpen()">
               <img src="images/defdp.jpg" alt="" class="">
               
               <span class="material-icons avatar-ico">
@@ -38,8 +38,10 @@
   <aside class="sidebar">
 
     <div class="nav-cls-div">
-      <button type="button" class="nav-cls-btn">
-        x
+      <button type="button" class="cls-btn" onclick="navCls()">
+        <span class="material-icons mi-n">
+          close
+        </span>
       </button>
     </div>
 
@@ -127,5 +129,6 @@
       
     </footer>
 
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

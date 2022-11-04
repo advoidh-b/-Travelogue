@@ -72,6 +72,7 @@
     height: 46px;
     padding: 0;
     justify-content: center;
+    cursor: pointer;
   }
   .avatar-ico {
     transform: scale(2.0);
@@ -83,24 +84,33 @@
     border-radius: 50%;
     display: none;
   }
+  /* Sidebar / navbar */
   aside.sidebar {
     position: fixed;
     right: 0;
     z-index: 99;
     height: 100vh;
-    width: 32%;
-    background: #ffffff70;
+    width: 0;
+    background: var(--bg-white);
     display: flex;
     align-items: center;
     flex-flow: column wrap;
+    transition: 0.2s linear;
   }
   div.nav-cls-div {
     width: 100%;
     padding: 0.8rem;
-    background: #000;
+    
+  }
+  .cls-btn {
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    color: var(--textcol);
   }
   div.form-title-div {
-    border: 1px solid #333;
+    border: none;
   }
   div.form-title-div > h1 {
     color: #222;
@@ -124,12 +134,13 @@
     display: block;
   }
   .ip-text {
-    font: 400 1rem var(--deffont);
+    font: 400 1rem  var(--textcol);
     padding: 8px 20px;
     margin: 0 auto 1.2rem;
     max-width: 220px;
     display: block;
     width: 220px;
+    border: 1px solid var(--textcol);
   }
   .ip-login {
     color: var(--sub-white);
@@ -151,7 +162,7 @@ div.sign-up-cont {
   
 }
 div.sign-up-cont > p{
-  color: #222;
+  color: var(--textcol);
 }
 a.sign-up {
   text-decoration: none;
@@ -166,7 +177,7 @@ div.query-div {
 div.query-div > a {
   display: flex;
   align-items: center;
-  color: var(--defcol);
+  color: var(--textcol);
   text-decoration: none;
 }
 .a-label {
