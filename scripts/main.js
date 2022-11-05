@@ -2,6 +2,14 @@
    * for: Travelogue(TM) */
 
 "use strict";
+/* KEEP CLEAR */
+
+
+document.onload = loadAnim();
+
+function loadAnim() {
+  document.body.style.animation = "docLoad 1s ease";
+}
 
 /* Sidebar opening and closing */
 const navOpen = () => {

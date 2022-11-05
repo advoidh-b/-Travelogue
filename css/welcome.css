@@ -58,7 +58,7 @@
     color: #1add9f;
   }
   a.logo {
-    font: 600 20pt var(--deffont);
+    font: 600 18pt var(--deffont);
     text-decoration: none;
     color: var(--f-white);
   }
@@ -77,7 +77,7 @@
   }
   .avatar-ico {
     transform: scale(2.0);
-    color: var(--sub-white);
+    color: #efefff96;
   }
   .avatar > img {
     width: 46px;
@@ -297,11 +297,15 @@ div.query-div > a {
       div.logo-container {
         min-width: auto;
       }
+      div.avatar {
+         cursor: none; 
+      }
       aside.sidebar {
         width: 0;
       }
       .ip-login, a.sign-up {
         font: 400 0.8rem var(--deffont);
+        padding: 12px 20px;
       }
       div.sidebar-form-cont {
         width: 100%;
@@ -310,29 +314,41 @@ div.query-div > a {
       section.sec1 {
         width: 100%;
       }
+
       div.intro-div {
         width: 100%;
         display: flex;
         justify-content: center;
         text-align: center;
       }
+
       .intro-h {
         font-size: 2.4rem;
         text-align: center;
       }
+
       .intro-p {
         font-size: 0.8rem;
       }
+
       a.intro-cta {
-        font: 400 0.88rem var(--deffont);
+        font: 400 0.96rem var(--deffont);
         margin: auto;
-        min-width: 68%;
-        padding: 10px 20px;
+        min-width: 74%;
+        padding: 12px 20px;
         justify-content: center;
       }
+
       footer {
         background: none;
       }  
+      div.contact {
+        justify-content: center;
+      }
+      div.contact-links {
+        width: 100%;
+        justify-content: space-between;
+     } 
     }
     /*  Tablets and landscape modes */
     @media screen and (min-width: 556px) and (max-width: 992px) {
@@ -342,3 +358,14 @@ div.query-div > a {
         max-width: 50%;
       }
     }
+/* Document Load Animation */
+    @keyframes docLoad {
+      0% {
+        opacity: 0;
+        transition: 0.6s;
+      }
+      100% {
+        opacity: 1.0;
+        transition: 0.6s;
+    }
+  }
