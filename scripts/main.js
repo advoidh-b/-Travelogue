@@ -1,9 +1,9 @@
 /* * Author: Advoidh B
-   * for: Travelogue(TM) */
+   * for: Travelogue(TM) 
+---------------------*/
 
 "use strict";
 /* KEEP CLEAR */
-
 
 document.onload = loadAnim();
 

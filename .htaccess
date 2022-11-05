@@ -1,0 +1,2 @@
+ErrorDocument 404
+./headers/404.html
