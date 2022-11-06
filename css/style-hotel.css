@@ -34,6 +34,9 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
   padding: 0.6rem 2.2rem;
   margin-top: 0;
   background: var(--bg-white);
@@ -99,28 +102,67 @@ div.avatar {
 }
 /* flexset 1 end */
 
+/* Sidebar / navbar */
+aside.sidebar {
+  position: fixed;
+  right: 0;
+  z-index: 19;
+  height: 100vh;
+  width: 0;
+  background: var(--bg-white);
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  transition: 0.2s linear;
+}
+div.nav-cls-div {
+  width: 100%;
+  background: none;
+}
+.cls-btn {
+  width: 48px;
+  height: 48px;
+  padding: 0.6rem;
+  background: none;
+  border: none;
+  color: var(--textcol);
+}
+
 section {
   padding: 0 2rem 1.6rem;
   
 }
 /* flexset 2 */
-div.search-items, div.suggestions, .sugg-links, div.search {
+div.search-items, div.suggestions, .sugg-links, div.search, .show-more {
   display: flex;
   align-items: center;
 }
 div.search-items {
   width: 100%;
   margin-top: 1.6rem;
-  
   flex-direction: row;
   justify-content: space-between;
+}
+div.suggestions .show-more {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  height: 50px;
+  text-decoration: none;
+  background: var(--f-white);
+  align-items: center;
+}
+
+.show-more, .sugg-links {
+  box-shadow: 0px 2px 8px rgba(100, 100, 100, 0.4);
+  color: var(--defcol);
 }
 div.suggestions {
   justify-items: flex-start;
   width: 50%;
   overflow-x: hidden;
   padding: 0.8rem 0;
-  
+  position: relative;
 }
 .categ {
   padding-right: 0.8rem;
@@ -132,7 +174,7 @@ div.suggestions {
   margin-right: 0.8rem;
   position: relative;
   justify-content: center;
-  box-shadow: 0px 2px 8px rgba(100, 100, 100, 0.4);
+  
 }
 .sugg-links .label {
   position: absolute;
@@ -418,6 +460,9 @@ div.contact {
     display: none;
   }
 
+  aside.sidebar {
+    height: 100vh;
+  }
 section.sec-1 {
   padding: 0 1.6rem;
   margin-top: 1.6rem;

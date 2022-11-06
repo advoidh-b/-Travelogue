@@ -32,7 +32,7 @@
       <a href="">GALLERY</a>
     </div>
     
-    <div class="avatar">
+    <div class="avatar" onclick="navOpen()">
       <img src="images/defdp.jpg" alt="" class="">
       <span class="material-icons avatar-ico">
         account_circle
@@ -42,6 +42,18 @@
     </nav>
 
 </header> 
+
+<aside class="sidebar">
+
+  <div class="nav-cls-div">
+    <button type="button" class="cls-btn" onclick="navCls()">
+      <span class="material-icons mi-n">
+        close
+      </span>
+    </button>
+  </div>
+  
+</aside>
 
 <section class="sec-1">
   
@@ -59,18 +71,24 @@
         </span>
       <img src="shocimg/beach.jpeg" onfocus="none">
       </div>
+
       <div class="sugg-links">
         <span class="label">
           Tropical
         </span>
         <img src="shocimg/jungle.jpeg">
       </div>
+
       <div class="sugg-links">
         <span class="label">
           High Range
         </span>
         <img src="shocimg/mountains.jpeg">
       </div>
+
+      <a href="#" class="show-more">
+        <i class="material-icons mi-arrow">keyboard_arrow_right</i>
+      </a>
     </div>
     
     <div class="search">
