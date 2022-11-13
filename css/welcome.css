@@ -232,6 +232,11 @@ div.query-div > a {
   border: none;
   box-shadow: 2px 2px 10px #11111150;
   }
+  a.intro-cta:hover .mi-arrow {
+    opacity: 0.6;
+    transition: 0.6s;
+    transform: translateX(0.8rem);
+  }
   .link-txt {
     background: none;
   }
