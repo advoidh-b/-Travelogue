@@ -137,13 +137,13 @@ div.aside-cont {
 }
 div.account-card {
  width: 100%;
- background: var(--bg);
+ background: var(--defcol);
  padding: 2.0rem 0.8rem;
  justify-content: center;
 }
 .acc-link {
   text-decoration: none;
-  color: var(--textcol);
+  color: var(--sub-white);
   flex-flow: column wrap;
   justify-content: center;
   text-align: center;
@@ -399,7 +399,7 @@ footer {
   background: #11171F;
   padding: 1.6rem 2.2rem 4.4rem;
 }
-div.contact {
+div.foot-contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -419,12 +419,12 @@ div.contact {
 .social-links > a, .contact-links > a {
   padding: 0.6rem;
   text-decoration: none;
-  color: var(--sub-white);
+  color: var(--textcol);
   display: flex;
   align-items: center;
 }
-.fab {
-  font-size: 1.4rem;
+div.foot-contact a:hover {
+  color: var(--bg);
 }
 .foot-ic {
   margin-right: 0.2rem;
@@ -555,9 +555,20 @@ mi-img {
 footer {
   padding: 1.6rem 1rem 6.6rem;
 }
-.social-links, .contact-links {
-  width: auto;
+div.foot-contact {
+  flex-flow: column wrap;
+  justify-content: flex-start;
+}
+
+.social-links {
+  width: 100%;
+  justify-content: space-between;
   }
+.contact-links {
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 1.2rem;
+}
 }
 
 /* ****** Tablets and wider scrns ****** */
