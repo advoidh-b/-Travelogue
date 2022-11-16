@@ -1,3 +1,9 @@
+/* *****************************
+   * Author: Advoidh B
+   * for: Travelogue(TM) 
+   * Date: 29-10-2022
+***************************** */
+
 * {
     box-sizing: border-box;
     outline: none;
@@ -14,7 +20,7 @@
     --f-white: #fffeff;
     --bg-white: #fefefe;
     --sub-white: #efefff;
-    
+    --dark-card: #1B2232;
     --deffont: "Figtree", sans-serif;
   }
   /* material icons fix */
@@ -222,7 +228,7 @@ div.query-div > a {
   a.intro-cta {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   max-width: 36%;
   font: 400 1rem var(--deffont);
   text-decoration: none;
@@ -235,13 +241,13 @@ div.query-div > a {
   a.intro-cta:hover .mi-arrow {
     opacity: 0.6;
     transition: 0.6s;
-    transform: translateX(0.8rem);
   }
   .link-txt {
     background: none;
   }
   .mi-arrow {
     background: none;
+    animation: 1.5s docLoad infinite;
   }
   footer {
     grid-area: foot;
@@ -376,10 +382,10 @@ div.query-div > a {
     @keyframes docLoad {
       0% {
         opacity: 0;
-        transition: 0.6s;
+        transition: 1.2s;
       }
       100% {
         opacity: 1.0;
-        transition: 0.6s;
+        transition: 1.2s;
     }
   }

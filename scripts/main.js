@@ -1,6 +1,8 @@
-/* * Author: Advoidh B
+/* *****************************
+   * Author: Advoidh B
    * for: Travelogue(TM) 
----------------------*/
+   * Date: 29-10-2022
+***************************** */
 
 "use strict";
 /* KEEP CLEAR */
@@ -8,7 +10,7 @@
 document.onload = loadAnim();
 
 function loadAnim() {
-  document.body.style.animation = "docLoad 1s ease";
+  document.body.style.animation = "docLoad 1s linear";
 }
 
 /* Sidebar opening and closing */

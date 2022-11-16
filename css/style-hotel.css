@@ -1,8 +1,8 @@
-/* 
-* author: AdvoidhB
-* for: "Travelogue TM"
-* date: 20-aug-2022
-*/
+/* *****************************
+   * Author: Advoidh B
+   * for: Travelogue(TM) 
+   * Date: 29-10-2022
+***************************** */
 * {
   box-sizing: border-box;
 }
@@ -25,15 +25,12 @@ html {
   --f-white: #fffeff;
   --bg-white: #fefefe;
   --sub-white: #efefff;
-  
+  --dark-card: #1B2232;
   --deffont: "Figtree", sans-serif;
 }
 /* material icons fix */
 .mi-n {
   padding-top: 3.6px;
-}
-.a-label {
-  margin-left: 0.4rem;
 }
 body {
   display: grid;
@@ -73,7 +70,7 @@ div.logo-container {
 }
 a.logo {
   font: 600 18pt var(--deffont);
-  color: var(--textcol);
+  color: var(--defcol);
 }
 div.nav-profile {
   display: flex;
@@ -122,7 +119,7 @@ aside, div.account-card, .acc-link, .acc-avatar {
 }
 aside {
   grid-area: as;
-  background: var(--bg-white);
+  background: var(--dark-card);
   flex-flow: column wrap;
   box-shadow: 0px 2px 10px rgba(100, 100, 100, 0.2);  
 }
@@ -134,6 +131,7 @@ div.aside-cont {
   top: 0;
   bottom: 0;
   z-index: 99;
+  background: var(--dark-card);
 }
 div.account-card {
  width: 100%;
@@ -167,7 +165,7 @@ img.user-dp {
   border-radius: inherit;
 }
 div.nav-cont {
-  background: var(--bg-white);
+  background: var(--dark-card);
   position: relative;
   width: 200px;
   max-width: 200px;
@@ -175,8 +173,8 @@ div.nav-cont {
 div.nav-cont > a {
     padding: 0.6rem 1.2rem;
     font: 400 1rem var(--deffont);
-    background: var(--bg-white);
-    color: var(--textcol);
+    background: none;
+    color: var(--sub-white);
     display: flex;
     align-items: center;
     width: 100%;
@@ -185,7 +183,7 @@ div.nav-cont > a {
 
 div.nav-cont > a:hover,
 div.nav-cont > a:focus {
-  color: var(--defcol);
+  opacity: 0.6;
 }
 
 .nav-label {
@@ -209,7 +207,7 @@ section.sec-2 {
 div.recc-title {
   margin: 0;
   width: 100%;
-  color: #4d4;
+  color: #2b8;
 }
 div.cards-container {
   background: none;
@@ -296,6 +294,7 @@ a.view-more:hover .mi-arrow {
 }
 .mi-arrow {
   outline: none;
+  margin-left: 0.48rem;
 }
 
 article.news-arti {
@@ -353,7 +352,9 @@ div.news-content-1 {
 
 i.loc-ico {
   font-size: 2.6rem;
-  color: var(--f-white);
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  -moz-text-stroke: 2px #fff;
 }
 
 .gallery-cont {
@@ -455,7 +456,7 @@ div.foot-contact a:hover {
     display: flex;
   }
   aside {
-    background: yellow;
+    background: var(--dark-card);
     position: fixed;
     z-index: 999;
     bottom: 0;
@@ -471,6 +472,7 @@ div.foot-contact a:hover {
     justify-content: space-between;
     width: 100%;
     max-width: 100%;
+    background: var(--dark-card);
   }
   div.nav-cont > a{
     width: auto;
@@ -478,6 +480,7 @@ div.foot-contact a:hover {
     justify-content: center;
     margin: 0;
     background: transparent;
+    color: var(--sub-white);
   }
   .nav-label {
     display: block;

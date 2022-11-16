@@ -2,14 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Advoidh Biju (Adwaith-B, Advoidh-B)">
+
     <title>Sign up - Travelogue</title>
 
     <link rel="stylesheet" href="../css/signup.css">
+
+    <link rel="icon" type="image/x-icon" href="./images/dp/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400&family=Space+Grotesk&display=swap" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
-    <section class="form-sec">
+    
         <div class="form-cont">
             <div class="form-title">
                 <h2 class="form-title-h">
@@ -17,16 +29,29 @@
                 </h2>
             </div>
 
-            <form action="../scripts/signup.php" method="post">
-                <input type="text" name="fullname" id="fullname" placeholder="Fullname" required>
-                <input type="text" name="username" id="username" placeholder="Username" required>
-                <input type="text" name="email" id="email" placeholder="Email" required>
-                <input type="text" name="password" id="password" placeholder="Password" required>
+            <form action="../scripts/signup.php" method="post" class="signup">
+                
+                <label for="fullname" >Fullname</label>
+                <input type="text" name="fullname" id="fullname"  required>
+
+                <label for="username" >Username</label>
+                <input type="text" name="username" id="username"  required>
+
+                <label for="email" >Email</label>
+                <input type="text" name="email" id="email" required>
+
+                <label for="password" >Password</label>
+                <input type="text" name="password" id="password"  required>
 
                 <input type="submit" class="create-acc-btn" value="Create Account" name="signup" id="signup">
             </form>
 
+            <div class="login">
+                <p>Existing User?</p>
+                <a href="#" class="login-btn">Log In</a>
+            </div>
+
         </div>
-    </section>
+    
 </body>
 </html>
