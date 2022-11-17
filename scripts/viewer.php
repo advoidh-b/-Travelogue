@@ -11,20 +11,23 @@
         }
         table > tr, td {
             border: 1px dotted #55f;
-            padding: 10px;
+            padding: 10px 40pt;
         }
-        .del {
+        input, .del {
             background: #d66;
             padding: 8px 10px;
             color: #fff;
+            border: 1px solid #d66;
         }
     </style>
 </head>
 <body>
+    <p>Table: tb_user</p>
     <table>        
         <tr>
             <th>Id</th>
             <th>Username</th>
+            <th>Fullname</th>
             <th>Emai</th>
             <th>Password</th>
         </tr>
@@ -36,7 +39,7 @@
         echo "Connect Error";
      }
      else {
-        $v_query = "SELECT id, username, email, password FROM tb_user";
+        $v_query = "SELECT id, username, fullname, email, password FROM tb_user";
         $q_out = $t_conn->query($v_query);
 
         if($q_out->num_rows > 0) {
@@ -45,6 +48,7 @@
 
                 $usid = $recd["id"];
                 $usn = $recd["username"];
+                $fnm = $recd["fullname"];
                 $use = $recd["email"];
                 $usp = $recd["password"];
 
@@ -52,11 +56,10 @@
 
                 echo "<td>".$usid."</td>";
                 echo "<td>".$usn."</td>";
+                echo "<td>".$fnm."</td>";
                 echo "<td>".$use."</td>";
                 echo "<td>".$usp."</td>";
-                echo "<td>";
-                echo "<a href='deleter.php' class='del'>Delete</a>";
-                echo "</td>";
+                
                 
                 echo "</tr>";
                 
@@ -79,7 +82,7 @@
     <form method="post">
         
     <input type="text" name="id" placeholder="Enter id to delete" required>
-    <input type="submit" name="del_all" value="Delete Record">
+    <input type="submit" name="del_all" value="Delete Record" class="del">
     <p for="id">NOTE: Refresh/Reload Page after deletion to View Changes</p>
     </form>
 </body>
