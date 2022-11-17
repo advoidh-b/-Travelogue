@@ -476,7 +476,7 @@ div.foot-contact a:hover {
     max-width: 100%;
     background: var(--dark-card);
   }
-  div.nav-cont > a{
+  div.nav-cont  a{
     width: auto;
     flex-flow: column wrap;
     justify-content: center;
