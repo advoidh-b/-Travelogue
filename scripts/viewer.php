@@ -66,9 +66,21 @@
         else {
             echo "No results";
         }
+        if(isset($_POST['del_all'])) {
+            $id = $_POST['id'];
+            $delq = ("delete from tb_user where id='$id'");
+            $t_conn->query($delq);
+        }
      }
      
      ?>
     </table>
+    <br><br>
+    <form method="post">
+        
+    <input type="text" name="id" placeholder="Enter id to delete" required>
+    <input type="submit" name="del_all" value="Delete Record">
+    <p for="id">NOTE: Refresh/Reload Page after deletion to View Changes</p>
+    </form>
 </body>
 </html>
