@@ -170,7 +170,7 @@ div.nav-cont {
   width: 200px;
   max-width: 200px;
 }
-div.nav-cont > a {
+div.nav-cont  a.nav-ico {
     padding: 0.6rem 1.2rem;
     font: 400 1rem var(--deffont);
     background: none;
@@ -180,7 +180,9 @@ div.nav-cont > a {
     width: 100%;
     margin: 0.8rem 0 0;
 }
-
+a.ad {
+  display: flex;
+}
 div.nav-cont > a:hover,
 div.nav-cont > a:focus {
   opacity: 0.6;
@@ -482,6 +484,9 @@ div.foot-contact a:hover {
     background: transparent;
     color: var(--sub-white);
   }
+  a.ad {
+    display: none;
+  }
   .nav-label {
     display: block;
     font-size: 0.6rem;
@@ -607,6 +612,9 @@ div.nav-cont {
   justify-content: space-between;
   width: 100%;
   max-width: 100%;
+}
+a.ad {
+  display: none;
 }
 div.loc-det-cont, div.gallery-cont {
   width: 60%;

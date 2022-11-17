@@ -39,9 +39,9 @@
             $t_conn->query($bulkDELq);
         }
 
-        echo "<a href='http://localhost/phpmyadmin/index.php?route=/sql&db=user_creden&table=tb_user&pos=0' style='color: #333; padding: 1.2rem; display: block; margin: 50pt auto; background: #4da; width: 30%; text-align: center;'>Open Sql Panel</a>";
+        echo "<a href='http://localhost/phpmyadmin/index.php?route=/sql&db=user_creden&table=tb_user&pos=0' style='background-color: #05445e; text-decoration: none; padding: 0.8rem; display: block; margin: 50pt auto; color: #fff; width: 30%; text-align: center; font-family: sans-serif; letter-spacing: 1.2px;'>Open Sql Panel</a>";
         // viewer page
-        echo "<a href='http://localhost/travelogue/scripts/viewer.php' style='color: #333; padding: 1.2rem; display: block; margin: 50pt auto; background: #4da; width: 30%; text-align: center;'>View Details</a>";
+        echo "<a href='http://localhost/travelogue/scripts/viewer.php' style='background-color: #05445e; text-decoration: none; padding: 0.8rem; display: block; margin: 50pt auto; color: #fff; width: 30%; text-align: center; font-family: sans-serif; letter-spacing: 1.2px;' text>Website Database Panel</a>";
 
 
      }

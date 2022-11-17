@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Access</title>
+    <title>Admin - No Access</title>
 </head>
 <style>
 * {
@@ -19,12 +19,23 @@
   --dark-card: #1B2232;
 }
   body {
-    font: 400 20px "Consolas", Monospace;
+    font: 400 16px "Consolas", Monospace;
     background: var(--bg-white);
     color: var(--textcol);
     margin: 0;
     padding: 0;
   }
+  .main-h {
+    background: #fcfc70;
+    color: #333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cr {
+        font-size: 0.8rem;
+    }
     .form1-cont {
         padding: 0.6rem;
     }
@@ -59,18 +70,16 @@
     h2 {
         color: #d44;
     }
-    footer {
-        text-align: center;
-    }
-    footer >p {
-        text-align: center;
-        font-size: 0.8rem;
-    }
+
 </style>
 <body>
     <section>
         <div class="form1-cont">
-        
+        <div>
+            <h1 class="main-h">
+                Administrator Panel - Travelogue(TM) &nbsp;<span class="cr">&copy;Advoidh B - 2022</span>
+            </h1>
+        </div>
 
        <form method="post" action="../scripts/updater.php">
 
@@ -78,18 +87,20 @@
             <h1>
                 SEC-I CREDENTIAL UPDATION
              </h1>
+             <p>Note: Update each record individually below.</p>
+            <input type="text" name="username" placeholder="Existing username" required>
+        </div>
 
-            <input type="text" name="username" placeholder="Existing username" >
+        <div>
+            <input type="text" name="uname_n" placeholder="New Username">
+            <input type="submit" value="UPDATE USERNAME" name="up_uname">
         </div>
 
         <div>
             <input type="text" name="fname_n" placeholder="New Fullname">
             <input type="submit" value="UPDATE FULLNAME" name="up_fname">
         </div>
-        <div>
-            <input type="text" name="uname_n" placeholder="New Username">
-            <input type="submit" value="UPDATE USERNAME" name="up_uname">
-        </div>
+
         <div>
             <input type="text" name="email_n" placeholder="New Email">
             <input type="submit" value="UPDATE EMAIL" name="up_email">
@@ -99,11 +110,14 @@
             <input type="submit" value="UPDATE PASSWORD" name="up_pass">
         </div>
         <div>
+            <br>
+            <p>Note: Fillout all fields above to activate.</p>
             <input type="submit" value="BULK DATA UPDATE ( &#9888; affects all values above)" name="up_all">
         </div>
 
         <div>
             <h2>SEC-II DELETION</h2>
+            <p>Note: Set username for rows to delete. If empty, all empty fields will be deleted.</p>
         </div>
         <div>
             <input type="text" name="id" placeholder="Existing ID" disabled>
@@ -115,8 +129,6 @@
         </form>
         </div>
     </section>
-    <footer>
-        <p>&copy; Advoidh B - 2022</p>
-    </footer>
+
 </body>
 </html>

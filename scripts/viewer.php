@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U-Cred</title>
+    <title>Website Database - Travelogue</title>
     <style>
         body {
             font: 400 14px "Arial", "Tahoma", sans-serif;
@@ -19,9 +19,26 @@
             color: #fff;
             border: 1px solid #d66;
         }
+        .a-panel-link {
+            background-color: #05445e;
+            text-decoration: none; 
+            padding: 0.8rem; 
+            display: block; 
+            margin: 50pt auto;
+            width: 200px; 
+            color: #fff; 
+            text-align: center; 
+            font-family: sans-serif; 
+            letter-spacing: 1.2px;
+        }
     </style>
 </head>
 <body>
+<div>
+        <a href="http://localhost/Travelogue/forms/admin-panel.html" class="a-panel-link">
+            Open Admin Panel
+        </a>
+    </div>
     <p>Table: tb_user</p>
     <table>        
         <tr>
@@ -82,8 +99,13 @@
     <form method="post">
         
     <input type="text" name="id" placeholder="Enter id to delete" required>
-    <input type="submit" name="del_all" value="Delete Record" class="del">
-    <p for="id">NOTE: Refresh/Reload Page after deletion to View Changes</p>
+    <input type="submit" name="del_all" value="Delete Record" class="del" onclick="reload()">
     </form>
+
+    <script type="text/javascript">
+        function reload() {
+                window.location.assign("http://localhost/travelogue/scripts/viewer.php");
+        }
+    </script>
 </body>
 </html>
