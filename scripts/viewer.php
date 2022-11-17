@@ -55,7 +55,7 @@
                 echo "<td>".$use."</td>";
                 echo "<td>".$usp."</td>";
                 echo "<td>";
-                echo "<a href='#' class='del'>Delete</a>";
+                echo "<a href='deleter.php' class='del'>Delete</a>";
                 echo "</td>";
                 
                 echo "</tr>";

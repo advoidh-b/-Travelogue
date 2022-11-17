@@ -30,4 +30,8 @@ const navCls = () => {
    sideBar.style.width = 0;
 };
 
-console.log(window.innerWidth, screen.width);
+/* console.log(window.innerWidth, screen.width); */
+
+let dat = document.querySelector('.date'),
+ d = new Date();
+ dat.textContent = d.getFullYear();

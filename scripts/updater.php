@@ -39,7 +39,10 @@
             $t_conn->query($bulkDELq);
         }
 
-        echo "<a href='http://localhost/phpmyadmin/index.php?route=/sql&db=user_creden&table=tb_user&pos=0' style='color: #333; padding: 1.2rem; display: block; margin: 50pt auto; background: #4da; width: 30%; text-align: center;'>View Details</a>";
+        echo "<a href='http://localhost/phpmyadmin/index.php?route=/sql&db=user_creden&table=tb_user&pos=0' style='color: #333; padding: 1.2rem; display: block; margin: 50pt auto; background: #4da; width: 30%; text-align: center;'>Open Sql Panel</a>";
+        // viewer page
+        echo "<a href='http://localhost/travelogue/scripts/viewer.php' style='color: #333; padding: 1.2rem; display: block; margin: 50pt auto; background: #4da; width: 30%; text-align: center;'>View Details</a>";
+
 
      }
 ?>

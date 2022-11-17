@@ -32,7 +32,7 @@
         display: block;
         margin-bottom: 1.2rem;
     }
-    input[type="text"], input[type="password"], input[type="submit"], input[type="button"], a {
+    input[type="text"], input[type="password"], input[type="submit"], button[type="submit"], a {
         padding: 0.4rem 1.2rem;
         min-width: 200px;
         font-size: 1rem;
@@ -42,7 +42,7 @@
         background: var(--textcol);
         color: var(--bg-white);
     }
-    .del {
+    button[type="submit"] {
         background: #d44;
         color: var(--bg-white);
     }
@@ -58,6 +58,13 @@
     }
     h2 {
         color: #d44;
+    }
+    footer {
+        text-align: center;
+    }
+    footer >p {
+        text-align: center;
+        font-size: 0.8rem;
     }
 </style>
 <body>
@@ -103,11 +110,13 @@
             <input type="text" name="username" placeholder="Existing Username" >
         </div>
         <div>
-            <input type="submit" value="&#9888; DATA DELETION (Username Based)" name="del_all" class="del">
+            <button type="submit" name="del_all">Delete Recrd</button>
             </div>
         </form>
         </div>
     </section>
-
+    <footer>
+        <p>&copy; Advoidh B - 2022</p>
+    </footer>
 </body>
 </html>
