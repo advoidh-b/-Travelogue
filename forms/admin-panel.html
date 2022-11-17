@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Access</title>
+</head>
+<style>
+* {
+    font-family: "Consolas", Monospace;
+    box-sizing: border-box;
+}
+
+:root {
+  --defcol: #05445e;
+  --textcol: #757785;
+  --bg-white: #fefefe;
+  --dark-card: #1B2232;
+}
+  body {
+    font: 400 20px "Consolas", Monospace;
+    background: var(--bg-white);
+    color: var(--textcol);
+    margin: 0;
+    padding: 0;
+  }
+    .form1-cont {
+        padding: 0.6rem;
+    }
+    form {
+        display: block;
+        margin-bottom: 1.2rem;
+    }
+    input[type="text"], input[type="password"], input[type="submit"], input[type="button"], a {
+        padding: 0.4rem 1.2rem;
+        min-width: 200px;
+        font-size: 1rem;
+        border: 1px solid var(--textcol);
+    }
+    input[type="submit"], a {
+        background: var(--textcol);
+        color: var(--bg-white);
+    }
+    .del {
+        background: #d44;
+        color: var(--bg-white);
+    }
+    div{
+        margin: 0.8rem;
+    }
+    h1, h2 {
+        font-size: 20pt;
+        margin: 1.8rem 0 1.2rem;
+    }
+    h1 {
+        color: #05445e;
+    }
+    h2 {
+        color: #d44;
+    }
+</style>
+<body>
+    <section>
+        <div class="form1-cont">
+        
+
+       <form method="post" action="../scripts/updater.php">
+
+        <div>
+            <h1>
+                SEC-I CREDENTIAL UPDATION
+             </h1>
+
+            <input type="text" name="username" placeholder="Existing username" >
+        </div>
+
+        <div>
+            <input type="text" name="fname_n" placeholder="New Fullname">
+            <input type="submit" value="UPDATE FULLNAME" name="up_fname">
+        </div>
+        <div>
+            <input type="text" name="uname_n" placeholder="New Username">
+            <input type="submit" value="UPDATE USERNAME" name="up_uname">
+        </div>
+        <div>
+            <input type="text" name="email_n" placeholder="New Email">
+            <input type="submit" value="UPDATE EMAIL" name="up_email">
+        </div>
+        <div>
+            <input type="text" name="pass_n" placeholder="New Password">
+            <input type="submit" value="UPDATE PASSWORD" name="up_pass">
+        </div>
+        <div>
+            <input type="submit" value="BULK DATA UPDATE ( &#9888; affects all values above)" name="up_all">
+        </div>
+
+        <div>
+            <h2>SEC-II DELETION</h2>
+        </div>
+        <div>
+            <input type="text" name="id" placeholder="Existing ID" disabled>
+            <input type="text" name="username" placeholder="Existing Username" >
+        </div>
+        <div>
+            <input type="submit" value="&#9888; DATA DELETION (Username Based)" name="del_all" class="del">
+            </div>
+        </form>
+        </div>
+    </section>
+
+</body>
+</html>
