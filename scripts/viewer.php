@@ -11,7 +11,6 @@
         }
         table > tr, td {
             border: 1px dotted #55f;
-            background: #efefff;
             padding: 10px 40pt;
         }
         input, .del {
@@ -32,11 +31,6 @@
             font-family: sans-serif; 
             letter-spacing: 1.2px;
         }
-        .a-panel-link:hover {
-    background: #efefff;
-    color: #333;
-    transition: 0.4s;
-  }
     </style>
 </head>
 <body>
@@ -104,14 +98,10 @@
     <br><br>
     <form method="post">
         
-    <input type="text" name="id" placeholder="Enter id to delete" required>
-    <input type="submit" name="del_all" value="Delete Record" class="del" onclick="reload()">
+    <input type="text" name="id" placeholder="Enter id to delete">
+    <input type="submit" name="del_all" value="Delete Record" class="del">
     </form>
 
-    <script type="text/javascript">
-        function reload() {
-                window.location.assign("http://localhost/travelogue/scripts/viewer.php");
-        }
-    </script>
+
 </body>
 </html>
