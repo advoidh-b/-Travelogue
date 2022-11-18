@@ -79,6 +79,11 @@
     width: 260px;
     font: 400 1rem var(--deffont);
   }
+  .create-acc-btn:hover {
+    background: var(--sub-white);
+    color: var(--defcol);
+    transition: 0.4s;
+  }
   div.login {
     text-align: center;
   }

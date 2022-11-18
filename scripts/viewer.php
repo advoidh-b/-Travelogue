@@ -11,6 +11,7 @@
         }
         table > tr, td {
             border: 1px dotted #55f;
+            background: #efefff;
             padding: 10px 40pt;
         }
         input, .del {
@@ -31,6 +32,11 @@
             font-family: sans-serif; 
             letter-spacing: 1.2px;
         }
+        .a-panel-link:hover {
+    background: #efefff;
+    color: #333;
+    transition: 0.4s;
+  }
     </style>
 </head>
 <body>

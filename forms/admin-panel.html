@@ -20,18 +20,22 @@
 }
   body {
     font: 400 16px "Consolas", Monospace;
-    background: var(--bg-white);
+    background: rgb(221, 198, 198);
     color: var(--textcol);
     margin: 0;
     padding: 0;
   }
   .main-h {
-    background: #fcfc70;
     color: #333;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3.6rem;
+  }
+  section {
+    background: var(--bg-white);
+    width: 60%;
   }
   .cr {
         font-size: 0.8rem;
@@ -112,7 +116,7 @@
         <div>
             <br>
             <p>Note: Fillout all fields above to activate.</p>
-            <input type="submit" value="BULK DATA UPDATE ( &#9888; affects all values above)" name="up_all">
+            <input type="submit" value="BULK UPDATE ( &#9888; affects all values above )" name="up_all">
         </div>
 
         <div>
@@ -124,7 +128,7 @@
             <input type="text" name="username" placeholder="Existing Username" >
         </div>
         <div>
-            <button type="submit" name="del_all">Delete Recrd</button>
+            <button type="submit" name="del_all">&#9888; DELETE RECORD</button>
             </div>
         </form>
         </div>

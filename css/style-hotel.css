@@ -170,7 +170,7 @@ div.nav-cont {
   width: 200px;
   max-width: 200px;
 }
-div.nav-cont  a.nav-ico {
+div.nav-cont  > a {
     padding: 0.6rem 1.2rem;
     font: 400 1rem var(--deffont);
     background: none;
