@@ -54,14 +54,17 @@
     display: block;
     color: var(--textcol);
   }
-  input[type="text"], input[type="password"] {
+  input[type="text"], input[type="password"], input[type="email"] {
     margin: 0 auto 1.2rem;
     border: 0.1rem solid var(--defcol);
     background: none;
     font: 400 1rem var(--deffont);
     color: var(--textcol);
+    outline: none;
   }
-
+  input:focus input:invalid {
+    border: 2px solid #d44;
+  }
   .create-acc-btn { 
     margin: auto;
     color: var(--sub-white);
@@ -72,7 +75,7 @@
     letter-spacing: 1px;
   }
 
-  input[type="text"],input[type="password"], .create-acc-btn, .login-btn {
+  input[type="text"],input[type="password"], input[type="email"], .create-acc-btn, .login-btn {
     display: block;
     padding: 10px 20px;
     min-width: 260px;
@@ -94,6 +97,11 @@
     text-align: center;
     text-decoration: none;
     color: var(--defcol);
+  }
+  #log {
+    color: #d44;
+    text-align: center;
+    font-size: 0.8rem;
   }
 @media (max-width: 700px) {
   div.form-cont {

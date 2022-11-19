@@ -29,24 +29,24 @@
                 </h2>
             </div>
 
-            <form action="../scripts/signup.php" method="post" class="signup">
+            <form action="../scripts/signup.php" method="post" class="signup" onsubmit="return validateForms()">
                 
                 <label for="fullname" >Fullname</label>
-                <input type="text" name="fullname" id="fullname"  required>
+                <input type="text" name="fullname" id="fullname" >
 
                 <label for="username" >Username</label>
-                <input type="text" name="username" id="username"  required>
+                <input type="text" name="username" id="username">
 
                 <label for="email" >Email</label>
-                <input type="text" name="email" id="email" required>
+                <input type="email" name="email" id="email">
 
                 <label for="password" >Password</label>
-                <input type="text" name="password" id="password"  required>
+                <input type="password" min="6" name="password" id="password">
                 
                 <button type="submit" class="create-acc-btn" value="" name="signup" id="signup">
                     Create Account
                 </button>
-                
+                <p id="log"></p>
             </form>
 
             <div class="login">
@@ -55,6 +55,25 @@
             </div>
 
         </div>
-    
+    <script type="text/javascript">
+
+        function validateForms() {
+            let fullname = document.getElementsByName('fullname')[0].value,
+                username = document.getElementsByName('username')[0].value,
+                email = document.getElementsByName('email')[0].value,
+                password = document.getElementsByName('password')[0].value,
+                logp = document.getElementById('log');
+
+            let ip_array = [fullname, username, email, password];
+
+            for(i of ip_array)  {
+                if(i =="" || i == "null" || i == "undefined") {
+                    
+                    logp.textContent = "Please fill out the above fields";
+                    return false;
+                }
+            }
+        }
+    </script>
 </body>
 </html>
