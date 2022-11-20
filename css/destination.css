@@ -52,7 +52,11 @@
     grid-area: sc;
     
     position: relative;
-    background: #000 url("../images/hero-img.webp") center / cover no-repeat;
+    background-color: #000;
+    background-image: url("../images/hero-img.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   div.img-gallery {
