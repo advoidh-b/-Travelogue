@@ -27,7 +27,6 @@ function populatePage() {
     let c_code = localStorage.getItem('cCode');
 
         let mT = document.getElementById('mainT');
-        let parsD = localStorage.getItem('cntry');
         
         let cntryStr = localStorage.getItem('cntry').toString(),
             c_codeStr = localStorage.getItem('cCode').toString();

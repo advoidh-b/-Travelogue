@@ -8,6 +8,7 @@
   }
   html {
     font: 400 16px var(--fontdef);
+    scroll-behavior: smooth;
   }
   
   /* #### hide Scrollbars ####
@@ -58,21 +59,42 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-
+  div.back {
+    position: absolute;
+    z-index: 10;
+    top: 0.8rem;
+    left: 0.8rem;
+    background: none;
+  }
+  a.back-btn {
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: var(--textwhite);
+  }
+  a.back-btn > i {
+    text-shadow: 1px 1px 4px #11111160;
+    font-size: 2.0rem;
+    padding: 0.6rem;
+  }
   div.img-gallery {
     position: absolute;
     z-index: 9;
-    bottom: 0;
+    bottom: 4rem;
     left: 0;
     width: 100%;
-    height: 200px;
-    margin: 2rem 0 2rem;
-    background: none;
+    height: 240px;
+    margin: 0;
+    padding: 0.6rem;
+    display: block;
   }
  .img {
     width: 100%;
     height: 100%;
     display: none;
+    margin: auto;
+    box-shadow: 1px 1px 8px #33333380;
+    border-radius: 2pt;
   }
   .def-img {
     display: block;
@@ -80,24 +102,36 @@
   div.switch-cont {
     position: absolute;
     z-index: 11;
-    bottom: 0;
+    bottom: 2.0rem;
     width: 100%;
-    background: white;
     padding: 0.6rem;
+    background: #11111190;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+  }
+  div.switch-cont > a {
+    height: 0.8rem;
+    width: 0.8rem;
+    background: var(--bgwhite);
+    box-shadow: 1px 1px 4px #11111180;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 0 0.4rem;
+  }
+  div.switch-cont > a:hover {
+    border: 2px solid var(--accent);
   }
   main.right {
     grid-area: mn;
-    background: #8f8;
-    padding: 4.0rem 2.0rem;
+    padding: 4.0rem 2.6rem;
     position: relative;
   }
 
   div.title-cont {
     width: 100%;
     background: none;
+    margin: 2.8rem 0 0;
   }
   div.title-cont > h1 {
     font-size: 2.2rem;
@@ -112,11 +146,15 @@
   }
   
   div.desc {
-    background: var(--bgwhite);
+    background: none;
     padding: 1.2rem 2.2rem 1.2rem 0;
+    text-overflow: ellipsis;
+    overflow-y: hidden;
+    max-height: 260px;
   }
-  p#desc {
+  p#desc-p {
     color: var(--textsub);
+    line-height: 140%;
   }
   div.usr-actions, div.actions-cont, div.actions-cont > a {
     display: flex;
@@ -124,25 +162,38 @@
   }
   div.usr-actions {
     position: fixed;
-    bottom: 0;
+    bottom: 2.0rem;
     left: auto;
     width: 100%;
     padding: 1.2rem 0;
-    background: transparent;
+    background: var(--bgwhite);
   }
   div.actions-cont {
-    background: hotpink;
+    background: none;
   }
-  div.actions-cont > a {
+   a#proceed, a#saved {
     font: 400 1rem var(--deffont);
     text-decoration: none;
-    padding: 0.8rem;
-    background: var(--accent);
-    color: var(--textwhite);
+    display: flex;
+    justify-content: center;
     border: none;
+    border-radius: 2pt;
     margin: 0 0.6rem 0 0;
   }
-
+  a#proceed {
+    background: var(--accent);
+    color: var(--textwhite);
+    padding: 0.8rem 1.0rem;
+  }
+  a#saved {
+    background: #ccc;
+    color: var(--textsub);
+    text-align: center;
+    padding: 0.8rem;
+  }
+  .ic-label {
+    margin-left: 0.4rem;
+  }
 
 /* ----------- Tablets and books -------------- */
 @media screen and (min-width: 762px) and (max-width: 990px) {
@@ -151,7 +202,13 @@
         grid-template: "sc mn" 100vh 
                         / 1fr 2fr;
     }
-
+    div.img-gallery {
+      bottom: 0.4rem;
+    }
+    div.switch-cont {
+      bottom: 0rem;
+      background: #11111140;
+    }
 }
 
 
@@ -170,9 +227,22 @@
     main.right {
         padding: 2.0rem;
     }
+    div.title-cont {
+      margin: 2.0rem 0 0;
+    }
+    div.title-cont > h1 {
+      font-size: 1.8rem;
+    }
     div.usr-actions {
         left: 0;
         padding: 0.6rem 2.0rem;
+    }
+    div.img-gallery {
+      bottom: 0.4rem;
+    }
+    div.switch-cont {
+      bottom: 0rem;
+      background: #11111140;
     }
     
   }
