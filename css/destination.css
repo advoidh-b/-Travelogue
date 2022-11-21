@@ -105,7 +105,7 @@
     bottom: 2.0rem;
     width: 100%;
     padding: 0.6rem;
-    background: #11111190;
+    background: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +131,7 @@
   div.title-cont {
     width: 100%;
     background: none;
-    margin: 2.8rem 0 0;
+    margin: 4.0rem 0 0;
   }
   div.title-cont > h1 {
     font-size: 2.2rem;
@@ -144,10 +144,43 @@
     margin: 0.6rem 0;
     padding: 0;
   }
-  
+  /* ratings start */
+  .ratings-cont {
+    padding: 0.6rem 0 0.6rem;
+    box-shadow: 1px 0px 20px var(--bg);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  div.ratings-cont label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    background: none;
+    margin-right: 0.8rem;
+  }
+  div.ratings-cont input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--accent);
+    border-radius: 50px;
+    margin-bottom: 2px;
+  }
+  div.ratings-cont input[type="radio"]:checked {
+    background: var(--accent);
+  }
+  div.ratings-cont input[type="radio"]:checked ~ .ic-rate {
+    color: var(--accent);
+  }
+  /* ratings end */
   div.desc {
     background: none;
-    padding: 1.2rem 2.2rem 1.2rem 0;
+    padding: 0 2.2rem 0 0;
     text-overflow: ellipsis;
     overflow-y: hidden;
     max-height: 260px;
@@ -161,41 +194,51 @@
     align-items: center;
   }
   div.usr-actions {
+    justify-content: space-between;
     position: fixed;
     bottom: 2.0rem;
-    left: auto;
-    width: 100%;
+    right: 2.0rem;
+    width: 60%;
     padding: 1.2rem 0;
-    background: var(--bgwhite);
+    background: none;
   }
   div.actions-cont {
     background: none;
+  }
+  div.flight-hrs {
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+  }
+  div.flight-hrs > i, .flight-time {
+    color: #4c6;
+    font-weight: 300;
   }
    a#proceed, a#saved {
     font: 400 1rem var(--deffont);
     text-decoration: none;
     display: flex;
     justify-content: center;
-    border: none;
     border-radius: 2pt;
-    margin: 0 0.6rem 0 0;
+    margin: 0 0.8rem 0 0;
   }
   a#proceed {
     background: var(--accent);
     color: var(--textwhite);
     padding: 0.8rem 1.0rem;
+    border: 2px solid var(--accent);
   }
   a#saved {
-    background: #ccc;
+    border: 2px solid #cccccc80;
     color: var(--textsub);
     text-align: center;
-    padding: 0.8rem;
+    padding: 0.8rem 0.4rem;
   }
   .ic-label {
     margin-left: 0.4rem;
   }
 
-/* ----------- Tablets and books -------------- */
+/* ----------- Tablets and books ------------ */
 @media screen and (min-width: 762px) and (max-width: 990px) {
     body {
         display: grid;
@@ -233,10 +276,7 @@
     div.title-cont > h1 {
       font-size: 1.8rem;
     }
-    div.usr-actions {
-        left: 0;
-        padding: 0.6rem 2.0rem;
-    }
+    
     div.img-gallery {
       bottom: 0.4rem;
     }
@@ -244,5 +284,24 @@
       bottom: 0rem;
       background: #11111140;
     }
-    
+    div.desc {
+      max-height: 140px;
+      overflow: hidden;
+    }
+    div.usr-actions {
+      left: 0;
+      padding: 0.6rem 1.2rem;
+      width: 100%;
   }
+  }
+  /* page load Anim */
+  @keyframes docLoad {
+    0% {
+      opacity: 0;
+      transition: 1.2s;
+    }
+    100% {
+      opacity: 1.0;
+      transition: 1.2s;
+  }
+}

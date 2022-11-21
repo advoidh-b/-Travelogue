@@ -7,14 +7,20 @@
 "use strict";
 /* KEEP CLEAR */
 
+document.onload = loadAnim();
+
+function loadAnim() {
+  document.body.style.animation = "docLoad 1s linear";
+}
+
 function change(n) {
     let imgs = document.getElementsByClassName("img");
-    for(let i = 0; i <= imgs.length; ++i) {
+    for(let img_i = 0; img_i <= imgs.length; ++img_i) {
         
-        imgs[i].style.display = "none";
+        imgs[img_i].style.display = "none";
 
-        if(n == i) {
-            imgs[i].style.display = "block";
+        if(n == img_i) {
+            imgs[img_i].style.display = "block";
             if(n > "0") {
                 imgs[0].style.display = "none";
             }
@@ -40,17 +46,25 @@ function populatePage() {
              
              let showC = document.querySelector('.left');
 
-             if(c_codeStr == "sw") {
+             if(c_codeStr) {
               
-              showC.style.backgroundImage = "url('../images/sw/1.jpeg')";
-              imgs[i].src = "../images/sw/" + imgarr[i];
+              showC.style.backgroundImage = "url('../images/loc/" + c_codeStr + "/1.jpeg')";
+              imgs[i].src = "../images/loc/" + c_codeStr + "/" + imgarr[i];
                 
             }
-             if(c_code == "nwr") {
-                showC.style.backgroundImage = "url('../images/nwr/1.jpeg')";
-              imgs[i].src = "../images/nwr/" + imgarr[i];
-             }
+            
             }
 
 }
 populatePage();
+
+
+function ge(namez) {
+    localStorage.setItem('names',namez);
+    let getname = localStorage.getItem('names');
+
+    let parsedS = JSON.parse(getname);
+    alert(parsedS);
+
+}
+ge("John");
