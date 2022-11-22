@@ -57,14 +57,3 @@ function populatePage() {
 
 }
 populatePage();
-
-
-function ge(namez) {
-    localStorage.setItem('names',namez);
-    let getname = localStorage.getItem('names');
-
-    let parsedS = JSON.parse(getname);
-    alert(parsedS);
-
-}
-ge("John");
