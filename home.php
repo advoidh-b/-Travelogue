@@ -74,7 +74,7 @@ session_start();
       </div>
 
       <span class="avatar-title">
-      Account
+      <?php echo $user_data['user_name']; ?>
       </span>
 
     </a>
