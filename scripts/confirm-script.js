@@ -8,12 +8,19 @@
 /* KEEP CLEAR */
 function fillDetails() {
     let dest = document.querySelector('.dest'),
-        hotel = document.querySelector('.hotel');
+        hotel = document.querySelector('.hotel'),
+        ip_ref = document.getElementById('refid');
 
         let lcDest = localStorage.getItem('cntry').toString(),
             lcHot = localStorage.getItem('hname').toString();
         dest.value = lcDest;
         hotel.value = lcHot;
+
+    (()=> {
+        let randm = Math.floor(Math.random() * 4000) + 1001;
+        ip_ref.value = "2fe022"+randm;
+    })();
+
 }
 fillDetails();
 
@@ -41,8 +48,10 @@ function validateBook() {
          console.log("Hello");
 
     if( nDay < dt || nDay > 28 || nMn > 12 || nMn < mt || nYr > yr+2 || nYr < yr) {
-        alert("WARNING : Invalid Date Received");
-        location.reload();
+        /* alert("WARNING : Invalid Date Received"); */
+        err_p.textContent = "Invalid Date. Please re-check";
+        let usrInp = document.getElementById('username').value;
+        
         return false;
     }
     

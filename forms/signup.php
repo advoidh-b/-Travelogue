@@ -21,8 +21,8 @@ session_start();
 
 			mysqli_query($con, $query);
 
-			header("Location: http://localhost/travelogue/home.php");
-			die;
+			header("Location: http://localhost/travelogue/forms/login.php");
+			
 		}else
 		{
 			echo "<script>alert('Error: Invalid Details. Please retry.');</script>";
@@ -65,13 +65,13 @@ session_start();
             <form method="post" class="signup" onsubmit="return validateForms()">
 
                 <label for="username" >Username</label>
-                <input type="text" name="user_name" id="username">
+                <input type="text" name="user_name" id="username" required>
 
                 <label for="email" >Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
 
                 <label for="password" >Password</label>
-                <input type="password" min="6" name="password" id="password">
+                <input type="password" min="6" name="password" id="password" required>
                 
                 <button type="submit" class="create-acc-btn" value="" name="signup" id="button">
                     Create Account

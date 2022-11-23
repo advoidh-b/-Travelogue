@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+  }
+  html {
+    font: 400 16px var(--fontdef);
+    scroll-behavior: smooth;
+  }
+  
+  /* #### hide Scrollbars ####
+  html {
+    scrollbar-width:  none;
+    -ms-overflow-style: none;
+  } 
+  ::scrollbar, ::-webkit-scrollbar {
+    display: none;
+  }
+  */
+  
+  :root {
+    --fwhite: #fffeff;
+    --accent: #05445e;
+    --green: #4c6;
+
+    --bg: #ddd;
+    --bgwhite: #fefeff;
+    --cardbg: #f8f7f8;
+    --carddark: #1B2232;
+
+    --textsub: #757785;
+    --textwhite: #efefff;
+    --textdark: #38383f;
+    --fontdef: "Figtree", sans-serif;
+  }
+  /* material icons fix */
+  .mi-n {
+    padding-top: 3.6px;
+  }
+  body {
+    font: 400 1rem var(--fontdef);
+    background: var(--bg);
+    color: var(--textsub);
+    margin: 0;
+    padding: 0;
+  }
+  section.sec-one {
+    padding: 2.0rem;
+  }
+  div.tabs-cont {
+    display: flex;
+    justify-content: flex-start;
+  }
+  div.tabs-cont > a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--textsub);
+    background: var(--bgwhite);
+    padding: 0.8rem 2.0rem;
+    margin-right: 0.8rem;
+    font: 500 1.2rem var(--fontdef);
+  }
+  div.tabDiv {
+    width: 100%;
+    background: #ccc;
+    padding: 0.8rem;
+    margin: 1.2rem 0;
+    display: none;
+  }
+  div.def-tab {
+    display: block;
+  }
+  a.logout {
+    color: var(--sub-white);
+    background: var(--defcol);
+    border: none;
+  }
+  a.logout, a.sign-up {
+    padding: 0.6rem;
+    max-width: 220px;
+    font: 400 1rem var(--deffont);
+    text-decoration: none;
+    max-width: 220px;
+    width: 220px;
+    display: block;
+    margin: auto;
+  }

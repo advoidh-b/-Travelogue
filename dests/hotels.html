@@ -59,7 +59,7 @@
     <p>
       Choose a regional hotel service (Service charges include) <span style="font-weight: bold; margin-left: 0.6rem;">OR</span>
     </p>
-    <a href="../forms/confirm.html" class="nav-label" onclick="cancelHot()">
+    <a href="../forms/confirm.php" class="nav-label" onclick="cancelHot()">
       Continue without service
     </a>
   </section>
@@ -229,7 +229,7 @@
 </footer>
   <script type="text/javascript">
   function hotel(hname) {
-    window.location.assign("../forms/confirm.html");
+    window.location.assign("../forms/confirm.php");
     localStorage.setItem('hname', hname);
  }
  function cancelHot() {

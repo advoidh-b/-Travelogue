@@ -68,7 +68,7 @@ session_start();
 
   <div class="account-card">
 
-    <a href="http://localhost/travelogue/forms/signup.html" class="acc-link">
+    <a href="http://localhost/travelogue/forms/user_settings.php" class="acc-link">
       <div class="acc-avatar">
         <img class="user-dp" src="./images/dp/bean-lisa.jpg" alt="display picture">
       </div>

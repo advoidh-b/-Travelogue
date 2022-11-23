@@ -36,7 +36,7 @@ session_start();
 				}
 			}
 			
-			echo "<script>alert('Wrong Password');</script>";
+			echo "<script>alert('Error: Incorrect Credentials');</script>";
 		}else
 		{
 			echo "<script>alert('Wrong Username or Password');</script>";
@@ -57,7 +57,7 @@ session_start();
 
     <meta name="author" content="Advoidh Biju (Adwaith-B, Advoidh-B)">
 
-    <title>Sign up - Travelogue</title>
+    <title>Log In - Travelogue</title>
 
     <link rel="stylesheet" href="../css/signup.css">
 
@@ -73,7 +73,7 @@ session_start();
         <div class="form-cont">
             <div class="form-title">
                 <h2 class="form-title-h">
-                    Let's get Started!
+                    Log in to Account
                 </h2>
             </div>
 

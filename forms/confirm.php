@@ -1,3 +1,13 @@
+<?php 
+
+session_start();
+
+	include("../php/connection.php");
+	include("../php/functions.php");
+    $user_data = check_login($con);
+    /* <?php echo $user_data['user_name']; ?> */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +32,7 @@
         <div class="form-cont">
             <h1>Confirm Booking</h1>
 
-            <form method="post" action="#" onsubmit="validateBook()">
+            <form method="post" action="../scripts/booking_action.php" onsubmit="return validateBook()">
                 <div class="selections">
                     <p>Selected destination</p>
                     <input type="text" name="loc_name" class="ip-text dest">
@@ -45,6 +55,8 @@
 
                     <input type="time"   size="8" name="time" id="time" class="time" required>
 
+                    <input id="username" name="usname" type="hidden" value="<?php echo $user_data['user_name']; ?>">
+
                     <p class="e-date ep"></p>  
                 </div>
 
@@ -53,10 +65,10 @@
                 <div class="vehicle-services">
                     
                 <div class="service-partners">
-                        <input type="radio" name="radio" class="radio-btn-t">
+                        <input type="radio" name="radio" class="radio-btn-t" value="uber.inc">
                     </div>
                     <div class="service-partners serv-two">
-                        <input type="radio" name="radio" class="radio-btn-t">
+                        <input type="radio" name="radio" class="radio-btn-t" value="ctaxi.inc">
                     </div>
                 </div>
 
@@ -68,6 +80,9 @@
                         <option value="six">Six seater</option>
                         <option value="six-2">Six seater(x2)</option>
                     </select>
+
+                    <input type="hidden" name="refid" id="refid">
+                    
                 </div>
 
             </div>
