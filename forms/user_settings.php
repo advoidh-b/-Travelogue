@@ -48,7 +48,7 @@ session_start();
                echo "Connect Error";
             }
             else {
-               $v_query = "SELECT destination, hotel, service, vis_date, refid FROM bookings where username='$usname' limit 1";
+               $v_query = "SELECT destination, hotel, vis_date, refid, service FROM bookings where username='$usname' limit 1";
 
                $q_out = $t_conn->query($v_query);
        
@@ -58,24 +58,25 @@ session_start();
        
                        $dest = $recd["destination"];
                        $hotel = $recd["hotel"];
-                       $service = $recd["service"];
+                       $serv = $recd["service"];
                        $vis_date = $recd["vis_date"];
                        $refid = $recd['refid'];
                        
                     echo "<p>Selected:  ".$dest."</p>";
                     echo "<p>Hotel:  ".$hotel."</p>";
                     echo "<p>Refid: ".$refid."</p>";
-                    echo "<p>Service:  ".$service."</p>";
+                    
                     echo "<p>Date of Arrival  : ".$vis_date."</p>";
+                    
                    }
+                   $t_conn->close();
            
                }
                else {
                    echo "No results";
                }
-            }               
+            }
         ?>
-
 
             </div>
 
@@ -102,6 +103,7 @@ session_start();
 
         if(n == tab_i) {
             tabs[tab_i].style.display = "block";
+            
         if(n > "0") {
                 tabs[0].style.display = "none";
             }

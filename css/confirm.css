@@ -161,7 +161,7 @@
   * Exclusive for booking_action.php
   ****************************** */
 
-  a.sett-link {
+  .sett-link {
     text-decoration: none;
    background: var(--accent);
    text-align: center;

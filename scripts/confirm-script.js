@@ -47,7 +47,7 @@ function validateBook() {
          console.log(dt, mt, yr);
          console.log("Hello");
 
-    if( nDay < dt || nDay > 28 || nMn > 12 || nMn < mt || nYr > yr+2 || nYr < yr) {
+    if( nDay < dt || nDay > 28 || nMn > 12 || nMn < mt || nYr > yr+1 || nYr < yr) {
         /* alert("WARNING : Invalid Date Received"); */
         err_p.textContent = "Invalid Date. Please re-check";
         let usrInp = document.getElementById('username').value;
