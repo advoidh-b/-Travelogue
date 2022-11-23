@@ -1,3 +1,15 @@
+<?php 
+session_start();
+
+	include("./php/connection.php");
+	include("./php/functions.php");
+
+	$user_data = check_login($con);
+
+  /* <?php echo $user_data['user_name']; ?> */
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,7 +142,7 @@
     </div>
     
     <div class="cards" onclick="dest('nwr', 'Skarstind, Norway')">
-      <img src="images/loc/nwr/1.jpeg" alt="1">
+      <img src="./images/loc/nwr/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
@@ -146,12 +158,12 @@
       </div>
     </div>
     
-    <div class="cards">
-      <img src="images/range3.jpeg" alt="1">
+    <div class="cards" onclick="dest('aus', 'Dachstein, Austria')">
+      <img src="./images/loc/aus/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
-            Alps low ranges
+            Daschstein
           </p>
           <span>
             Austria
@@ -163,15 +175,15 @@
       </div>
     </div>
     
-    <div class="cards">
-      <img src="images/range4.jpeg" alt="1">
+    <div class="cards" onclick="dest('geo', 'Caucasus, Georgia')">
+      <img src="./images/loc/geo/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
-            Mount Alps
+            Caucasus
           </p>
           <span>
-            Switzerland
+            Georgia
           </span>
         </div>
         <a href="#" class="">
@@ -180,8 +192,8 @@
       </div>
     </div>
     
-    <div class="cards">
-      <img src="images/range5.jpeg" alt="1">
+    <div class="cards" onclick="dest('fin', 'Duestance, Finand')">
+      <img src="images/loc/fin/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
@@ -197,8 +209,8 @@
       </div>
     </div>
     
-    <div class="cards">
-      <img src="images/range6.jpeg" alt="1">
+    <div class="cards" onclick="dest('wv', 'Moamma, West virginia')">
+      <img src="./images/loc/wv/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
@@ -303,6 +315,6 @@
 
   </div>
 </footer>
-  <script src="./scripts/hotel-script.js"></script>
+  <script src="./scripts/home-script.js"></script>
 </body>
 </html>

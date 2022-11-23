@@ -59,7 +59,9 @@
     <p>
       Choose a regional hotel service (Service charges include) <span style="font-weight: bold; margin-left: 0.6rem;">OR</span>
     </p>
-    <a href="" class="nav-label">Continue without service</a>
+    <a href="../forms/confirm.html" class="nav-label" onclick="cancelHot()">
+      Continue without service
+    </a>
   </section>
 <section class="sec-1">
   
@@ -75,12 +77,12 @@
   
   <div class="cards-container">
     
-    <div class="cards" onclick="dest('swi', 'Alps, Switzerland')">
-      <img src="../images/loc/swi/1.jpeg" alt="1">
+    <div class="cards" onclick="hotel('Hotel Blue Viking')">
+      <img src="../images/loc/hotels/hot1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
-            Alps Range
+            Hotel Blue Viking
           </p>
 
           <span id="checkin-out">6AM - 6:30PM <span id="distance">
@@ -99,15 +101,15 @@
 
     </div>
     
-    <div class="cards" onclick="dest('nwr', 'Skarstind, Norway')">
-      <img src="../images/loc/nwr/1.jpeg" alt="1">
+    <div class="cards" onclick="hotel('Hotel Willings')">
+      <img src="../images/loc/hotels/hot2.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
-            Skarstind
+            Hotel willings
           </p>
 
-          <span id="checkin-out">6AM - 6:30PM <span id="distance">
+          <span id="checkin-out">4AM - 8:30PM <span id="distance">
             <i>
             &nbsp;&nbsp;
             </i>27KM</span>
@@ -118,15 +120,15 @@
       </div>
     </div>
     
-    <div class="cards">
-      <img src="../images/range3.jpeg" alt="1">
+    <div class="cards" onclick="hotel('Hotel Radisson')">
+      <img src="../images/loc/hotels/hot3.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
-            Alps low ranges
+            Hotel Radisson
           </p>
 
-          <span id="checkin-out">6AM - 6:30PM <span id="distance">
+          <span id="checkin-out">4AM - 9:30PM <span id="distance">
             <i>
             &nbsp;&nbsp;
             </i>32KM</span>
@@ -137,15 +139,15 @@
       </div>
     </div>
     
-    <div class="cards">
-      <img src="../images/range4.jpeg" alt="1">
+    <div class="cards" onclick="hotel('Arlanda')">
+      <img src="../images/loc/hotels/hot4.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
-            Mount Alps
+            Arlanda
           </p>
 
-          <span id="checkin-out">6AM - 6:30PM <span id="distance">
+          <span id="checkin-out">5AM - 7:30PM <span id="distance">
             <i>
             &nbsp;&nbsp;
             </i>46KM</span>
@@ -156,15 +158,15 @@
       </div>
     </div>
     
-    <div class="cards">
-      <img src="../images/range5.jpeg" alt="1">
+    <div class="cards" onclick="hotel('Duestance Hotel')">
+      <img src="../images/loc/hotels/hot5.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
           <p>
-            Duestance
+            Duestance Hotel
           </p>
 
-          <span id="checkin-out">6AM - 6:30PM <span id="distance">
+          <span id="checkin-out">4AM - 10:30PM <span id="distance">
             <i>
             &nbsp;&nbsp;
             </i>60KM</span>
@@ -225,6 +227,14 @@
 
   </div>
 </footer>
-  <script src="./scripts/hotel-script.js"></script>
+  <script type="text/javascript">
+  function hotel(hname) {
+    window.location.assign("../forms/confirm.html");
+    localStorage.setItem('hname', hname);
+ }
+ function cancelHot() {
+    localStorage.setItem('hname', 'not selected');
+ }
+  </script>
 </body>
 </html>

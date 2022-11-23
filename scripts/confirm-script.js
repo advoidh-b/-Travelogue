@@ -6,6 +6,16 @@
 
 "use strict";
 /* KEEP CLEAR */
+function fillDetails() {
+    let dest = document.querySelector('.dest'),
+        hotel = document.querySelector('.hotel');
+
+        let lcDest = localStorage.getItem('cntry').toString(),
+            lcHot = localStorage.getItem('hname').toString();
+        dest.value = lcDest;
+        hotel.value = lcHot;
+}
+fillDetails();
 
 function validateBook() {
 
@@ -31,7 +41,7 @@ function validateBook() {
          console.log("Hello");
 
     if( nDay < dt || nDay > 28 || nMn > 12 || nMn < mt || nYr > yr+2 || nYr < yr) {
-        alert("Alert: Invalid Date received");
+        alert("WARNING : Invalid Date Received");
         location.reload();
         return false;
     }

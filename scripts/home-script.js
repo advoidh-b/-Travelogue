@@ -6,3 +6,4 @@ function dest(cCode,cntry) {
     localStorage.setItem('cntry',cntry);
     console.log(localStorage.getItem('cntry'),localStorage.getItem('cCode'));
  }
+

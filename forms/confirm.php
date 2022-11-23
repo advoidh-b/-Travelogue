@@ -22,13 +22,13 @@
         <div class="form-cont">
             <h1>Confirm Booking</h1>
 
-            <form method="post" action="ac.php" onsubmit="validateBook()">
+            <form method="post" action="#" onsubmit="validateBook()">
                 <div class="selections">
                     <p>Selected destination</p>
-                    <input type="text" name="loc_name" class="ip-text">
+                    <input type="text" name="loc_name" class="ip-text dest">
 
                     <p>Hotel Service selected</p>
-                    <input type="text" name="hotel_name" class="ip-text">
+                    <input type="text" name="hotel_name" class="ip-text hotel">
 
                 </div>
                 
@@ -53,16 +53,15 @@
                 <div class="vehicle-services">
                     
                 <div class="service-partners">
-                    Uber
                         <input type="radio" name="radio" class="radio-btn-t">
                     </div>
-                    <div class="service-partners">
+                    <div class="service-partners serv-two">
                         <input type="radio" name="radio" class="radio-btn-t">
                     </div>
                 </div>
 
                 <div>
-                    <p>Select a vehicle type (default: Four seater)</p>
+                    <p>Select a vehicle type (Default: Four seater)</p>
 
                     <select name="cars" id="car-type" class="veh">
                         <option value="four">Four seater</option>

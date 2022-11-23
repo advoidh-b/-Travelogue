@@ -235,7 +235,7 @@ div.cards > img {
 }
 div.card-action {
   position: absolute;
-  bottom: 0.6rem;
+  bottom: 0rem;
   left: 0;
   width: 100%;
   padding: 0 0.8rem;
@@ -243,25 +243,26 @@ div.card-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: none;
+  background: var(--f-white);
 }
 div.loc-details {
-  color: #fefeff;
+  color: var(--textcol);
+  background: var(--f-white);
 }
 div.loc-details > p, div.loc-details > span {
-  text-shadow: -1px 2px 8px rgba(99, 99, 122, 0.8);
+  text-decoration: none;
 }
 div.loc-details > p {
   color: var(--defcol);
   font: 500 1.rem var(--deffont);
   margin: 0 0 0.2rem;
-  color: #fafafa;
+  color: var(--textcol);
 }
 div.loc-details > span {
   font-size: 0.8rem;
   display: block;
   margin: 0;
-  color: #efefef;
+  color: var(--defcol);
 }
 
 .star {
