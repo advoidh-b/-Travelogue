@@ -58,13 +58,31 @@
     margin-right: 0.8rem;
     font: 500 1.2rem var(--fontdef);
   }
+  div.tabs-cont > a:hover {
+    border-bottom: 4px solid var(--accent);
+  }
   div.tabDiv {
-    width: 100%;
+    width: 60%;
     background: var(--bgwhite);
     border-bottom: 4px solid #05445e;
     padding: 0.8rem;
     margin: 1.2rem 0;
     display: none;
+  }
+  .cancel {
+    text-decoration: none;
+   background: var(--accent);
+   text-align: center;
+   margin: 1.6rem 0 0.8rem;
+   padding: 0.8rem;
+   font: 400 1rem var(--fontdef);
+   border: none;
+   border-radius: 2pt;
+   color: var(--textwhite);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 20%;
   }
   div.def-tab {
     display: block;

@@ -161,18 +161,4 @@
   * Exclusive for booking_action.php
   ****************************** */
 
-  .sett-link {
-    text-decoration: none;
-   background: var(--accent);
-   text-align: center;
-   margin: 1.6rem auto 0.8rem;
-   padding: 0.8rem;
-   font: 400 1rem var(--fontdef);
-   border: none;
-   border-radius: 2pt;
-   color: var(--textwhite);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 50%;
-  }
+  

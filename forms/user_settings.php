@@ -39,7 +39,7 @@ session_start();
         </div>
 
             <div class="tabDiv def-tab">
-
+            <h1>Active Booking:</h1>
 
         <?php
             $t_conn = new mysqli("localhost","root","","travelogue");
@@ -77,7 +77,13 @@ session_start();
                }
             }
         ?>
+            <form action="./cancel.php" method="post">
 
+             <input type='hidden' name='usname' value='<?php echo $usname ?>'>
+             <input type="submit" name="cancel"
+             value="Cancel" class="cancel">
+
+            </form>
             </div>
 
             <div class="tabDiv">
