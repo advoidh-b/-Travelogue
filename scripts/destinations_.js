@@ -29,15 +29,23 @@ function change(n) {
 }
 
 function populatePage() {
-    let cntry = localStorage.getItem('cntry');
-    let c_code = localStorage.getItem('cCode');
+    let cntry = localStorage.getItem('cntry'),
+        c_code = localStorage.getItem('cCode'),
+        fhr = localStorage.getItem('fhr'),
+        rating = localStorage.getItem('rating');
 
-        let mT = document.getElementById('mainT');
-        
+        let mT = document.getElementById('mainT'),
+        flightH = document.querySelector('.flight-time'),
+        review = document.querySelector('.ic-rate');
+
         let cntryStr = localStorage.getItem('cntry').toString(),
-            c_codeStr = localStorage.getItem('cCode').toString();
+            c_codeStr = localStorage.getItem('cCode').toString(),
+            fhrStr = localStorage.getItem('fhr').toString(),
+            ratingStr = localStorage.getItem('rating').toString();
 
          mT.textContent = cntryStr;
+         flightH.textContent = fhrStr + " Hours";
+         review.textContent = ratingStr + "  Reviews";
 
          let imgarr = ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg"],
              imgs = document.getElementsByClassName("img");

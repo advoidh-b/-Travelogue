@@ -18,7 +18,7 @@ function fillDetails() {
 
     (()=> {
         let randm = Math.floor(Math.random() * 4000) + 1001;
-        ip_ref.value = "2fe022"+randm;
+        ip_ref.value = "2fe"+randm+"022"+randm;
     })();
 
 }

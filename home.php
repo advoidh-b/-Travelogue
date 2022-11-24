@@ -124,7 +124,7 @@ session_start();
   
   <div class="cards-container">
     
-    <div class="cards" onclick="dest('swi', 'Alps, Switzerland')">
+    <div class="cards" onclick="dest('swi', 'Alps, Switzerland', '10', '70%')">
       <img src="./images/loc/swi/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
@@ -141,7 +141,7 @@ session_start();
       </div>
     </div>
     
-    <div class="cards" onclick="dest('nwr', 'Skarstind, Norway')">
+    <div class="cards" onclick="dest('nwr', 'Skarstind, Norway', '09', '80%')">
       <img src="./images/loc/nwr/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
@@ -158,7 +158,7 @@ session_start();
       </div>
     </div>
     
-    <div class="cards" onclick="dest('aus', 'Dachstein, Austria')">
+    <div class="cards" onclick="dest('aus', 'Dachstein, Austria', '8', '66%')">
       <img src="./images/loc/aus/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
@@ -175,7 +175,7 @@ session_start();
       </div>
     </div>
     
-    <div class="cards" onclick="dest('geo', 'Caucasus, Georgia')">
+    <div class="cards" onclick="dest('geo', 'Caucasus, Georgia', '6', '52%')">
       <img src="./images/loc/geo/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
@@ -192,7 +192,7 @@ session_start();
       </div>
     </div>
     
-    <div class="cards" onclick="dest('fin', 'Duestance, Finand')">
+    <div class="cards" onclick="dest('fin', 'Duestance, Finland', '11', '87%')">
       <img src="images/loc/fin/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">
@@ -209,7 +209,7 @@ session_start();
       </div>
     </div>
     
-    <div class="cards" onclick="dest('wv', 'Moamma, West virginia')">
+    <div class="cards" onclick="dest('wv', 'Moamma, West virginia', '14', '78%')">
       <img src="./images/loc/wv/1.jpeg" alt="1">
       <div class="card-action">
         <div class="loc-details">

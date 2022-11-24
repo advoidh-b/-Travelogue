@@ -161,4 +161,8 @@
   * Exclusive for booking_action.php
   ****************************** */
 
-  
+  @media (max-width: 762px) {
+    .form-cont {
+      width: 100%;
+    }
+  }
