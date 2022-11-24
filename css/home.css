@@ -153,10 +153,10 @@ div.account-card {
 }
 .acc-avatar {
   background: transparent;
-  max-width: 4.0rem; 
-  max-height: 4.0rem;
-  height: 4.0rem;
-  width: 4.0rem;
+  max-width: 5.0rem; 
+  max-height: 5.0rem;
+  height: 5.0rem;
+  width: 5.0rem;
   border-radius: 50px;
 }
 img.user-dp {

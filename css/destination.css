@@ -194,6 +194,9 @@
     display: flex;
     align-items: center;
   }
+  .rating {
+    color: #f7f75c;
+  }
   div.usr-actions {
     justify-content: space-between;
     position: fixed;

@@ -22,7 +22,6 @@ session_start();
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <title>-</title>
-
     <link rel="stylesheet" href="../css/confirm.css">
 
 </head>

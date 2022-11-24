@@ -50,6 +50,7 @@
   }
   section.sec-one {
     padding: 2.0rem;
+    width: 100%;
   }
   .form-cont {
     margin: auto;
@@ -161,8 +162,8 @@
   * Exclusive for booking_action.php
   ****************************** */
 
-  @media (max-width: 762px) {
-    .form-cont {
-      width: 100%;
+  @media (max-width: 690px) {
+    div.form-cont {
+      min-width: 100%;
     }
   }
