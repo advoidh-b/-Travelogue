@@ -28,14 +28,17 @@ session_start();
 					
 					if($user_data['password'] === $password)
 					{
-
 						$_SESSION['user_id'] = $user_data['user_id'];
 						header("Location: http://localhost/travelogue/home.php");
 						die;
+                        
 					}
+                 
 				}
 			}
-			
+
+            
+
 			echo "<script>alert('Error: Incorrect Credentials');</script>";
 		}else
 		{

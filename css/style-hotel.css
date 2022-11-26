@@ -18,23 +18,26 @@ html {
 */
 
 :root {
-  --bg: #f0f0f2;
-  --cardbg: #f8f7f8;
+  --fwhite: #fffeff;
+  --accent: #05445e;
   --green: #4c6;
-  --defcol: #05445e;
-  --textcol: #757785;
-  --f-white: #fffeff;
-  --bg-white: #fefefe;
-  --sub-white: #efefff;
-  --dark-card: #1B2232;
-  --deffont: "Figtree", sans-serif;
+
+  --bg: #dededf;
+  --bgwhite: #fefeff;
+  --cardbg: #f8f7f8;
+  --carddark: #262b36;
+
+  --textsub: #757785;
+  --textwhite: #efefff;
+  --textdark: #38383f;
+  --fontdef: "Figtree", sans-serif;
 }
 /* material icons fix */
 .mi-n {
   padding-top: 3.6px;
 }
 html {
-  font: 400 15px var(--deffont);
+  font: 400 15px var(--fontdef);
 }
 body {
   display: grid;
@@ -44,7 +47,7 @@ body {
                   / 1fr 1fr 1fr 1fr;
 
   background: var(--bg);
-  color: var(--textcol);
+  color: var(--textsub);
   margin: 0;
   padding: 0;
 }
@@ -53,7 +56,7 @@ header {
   grid-area: hd;
   padding: 0.6rem 2.2rem;
   margin-top: 0;
-  background: var(--bg-white);
+  background: var(--bgwhite);
 }
 header a {
   text-decoration: none;
@@ -73,8 +76,8 @@ div.logo-container {
   color: #1add9f;
 }
 a.logo {
-  font: 600 18pt var(--deffont);
-  color: var(--defcol);
+  font: 600 18pt var(--fontdef);
+  color: var(--accent);
 }
 div.nav-profile {
   display: flex;
@@ -89,14 +92,14 @@ div.top-nav {
 }
 
 div.top-nav > a {
- color: var(--textcol);
+ color: var(--textsub);
  font-size: 0.8rem;
  margin: 0 1.2rem;
  padding: 0.6rem;
 }
 div.top-nav > a:hover, div.top-nav > a:active  {
-  border-bottom: 2px solid var(--defcol);
-  color: var(--defcol);
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
 }
 div.avatar {
   width: 46px;
@@ -135,24 +138,24 @@ div.aside-cont {
   top: 0;
   bottom: 0;
   z-index: 99;
-  background: var(--dark-card);
+  background: var(--carddark);
 }
 div.account-card {
  width: 100%;
- background: var(--defcol);
+ background: var(--accent);
  padding: 2.0rem 0.8rem;
  justify-content: center;
 }
 .acc-link {
   text-decoration: none;
-  color: var(--sub-white);
+  color: var(--textwhite);
   flex-flow: column wrap;
   justify-content: center;
   text-align: center;
 }
 .avatar-title {
   margin-top: 0.8rem;
-  font: 500 1rem var(--deffont);
+  font: 500 1rem var(--fontdef);
   display: block;
 }
 .acc-avatar {
@@ -169,16 +172,16 @@ img.user-dp {
   border-radius: inherit;
 }
 div.nav-cont {
-  background: var(--dark-card);
+  background: var(--carddark);
   position: relative;
   width: 200px;
   max-width: 200px;
 }
 div.nav-cont  > a {
     padding: 0.6rem 1.2rem;
-    font: 400 1rem var(--deffont);
+    font: 400 1rem var(--fontdef);
     background: none;
-    color: var(--sub-white);
+    color: var(--textwhite);
     display: flex;
     align-items: center;
     width: 100%;
@@ -256,11 +259,11 @@ div.card-action {
   background: var(--cardbg);
 }
 div.loc-details {
-  color: var(--textcol);
+  color: var(--textsub);
 }
 div.loc-details > p {
-  color: var(--textcol);
-  font: 400 1.0rem var(--deffont);
+  color: var(--textsub);
+  font: 400 1.0rem var(--fontdef);
   margin: 0 0 0.2rem;
 }
 div.loc-details > span {
@@ -275,9 +278,9 @@ div.loc-details > span {
   background: none;
   padding: 0.4rem;
   text-align: center;
-  border: 0.22px solid var(--textcol);
+  border: 0.22px solid var(--textsub);
   border-radius: 2pt;
-  color: var(--defcol);
+  color: var(--accent);
   font-size: 0.8rem;
 }
 .star {
@@ -319,7 +322,7 @@ div.foot-contact {
 .social-links > a, .contact-links > a {
   padding: 0.6rem;
   text-decoration: none;
-  color: var(--textcol);
+  color: var(--textsub);
   display: flex;
   align-items: center;
 }
@@ -338,7 +341,7 @@ div.foot-contact a:hover {
     font-size: 1.4rem;
   }
   html {
-    font: 400 14px var(--deffont);
+    font: 400 14px var(--fontdef);
   }
   body {
    display: grid;
@@ -358,7 +361,7 @@ div.foot-contact a:hover {
     display: flex;
   }
   aside {
-    background: var(--dark-card);
+    background: var(--carddark);
     position: fixed;
     z-index: 999;
     bottom: 0;
@@ -374,7 +377,7 @@ div.foot-contact a:hover {
     justify-content: space-between;
     width: 100%;
     max-width: 100%;
-    background: var(--dark-card);
+    background: var(--carddark);
   }
   div.nav-cont  a{
     width: auto;
@@ -382,7 +385,7 @@ div.foot-contact a:hover {
     justify-content: center;
     margin: 0;
     background: transparent;
-    color: var(--sub-white);
+    color: var(--textwhite);
   }
   a.ad {
     display: none;
@@ -417,7 +420,7 @@ div.cards {
   width: 100%;
 }
 div.loc-details > p {
-  font: 500 1rem var(--deffont);
+  font: 500 1rem var(--fontdef);
 }
 div.loc-details > span {
   font-size: 0.8rem;
@@ -455,7 +458,7 @@ div.foot-contact {
     "mn mn mn mn" auto
     "ft ft ft ft" auto 
     / 1fr 1fr 1fr 1fr;
-    font: 400 14px var(--deffont);
+    font: 400 14px var(--fontdef);
   }
   div.avatar {
     display: none;
@@ -491,6 +494,6 @@ div.loc-det-cont, div.gallery-cont {
   width: 60%;
 }
 div.loc-details > p {
-  font: 400 1.0rem var(--deffont);
+  font: 400 1.0rem var(--fontdef);
 }
 }

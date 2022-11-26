@@ -68,7 +68,6 @@
                 $fnm = $recd["fullname"];
                 $use = $recd["email"];
                 $usp = $recd["password"];
-
                 echo "<tr>";
 
                 echo "<td>".$usid."</td>";
@@ -85,11 +84,6 @@
         }
         else {
             echo "No results";
-        }
-        if(isset($_POST['del_all'])) {
-            $id = $_POST['id'];
-            $delq = ("delete from tb_user where id='$id'");
-            $t_conn->query($delq);
         }
      }
      
