@@ -51,6 +51,7 @@
   <div class="aside-cont">
 
   
+<div class='pad-overkill'></div>
 
   <div class="nav-cont">
     <a href="#" >
@@ -58,14 +59,14 @@
       <span class="nav-label">Home</span>
     </a>
 
-    <a href="#" >
-      <i class="material-icons">search</i>
-      <span class="nav-label">Search</span>
+    <a href="#" onclick='tabs(0)'>
+      <i class="material-icons">book</i>
+      <span class="nav-label"> User Record</span>
     </a>
 
-    <a href="#">
+    <a href="#" onclick='tabs(1)'>
       <i class="material-icons">book</i>
-      <span class="nav-label">Bookings</span>
+      <span class="nav-label">Booking Record</span>
     </a>
 
     <a href="#">
@@ -91,13 +92,15 @@
 
   </div>
 
+  <div class='pad-overkill'></div>
+
 </div>
 
 </aside>
 
 <main>
   <section>
-    <div class="table-cont">
+    <div class="table-cont" class='def-tab'>
     <p>Table: users</p>
     <table class="users">        
         <tr>
@@ -108,7 +111,8 @@
             <th>Delete</th>
             <th>Update</th>
         </tr>
-        <?php 
+
+    <?php 
      echo "<br>";
      $t_conn = new mysqli("localhost","root","","travelogue");
 
@@ -134,9 +138,80 @@
                 echo "<td>".$usn."</td>";
                 echo "<td>".$use."</td>";
                 echo "<td>".$usp."</td>";
-                echo "<td> <form method='post' action='../scripts/delete_rcd.php'> <input type='hidden' size='2' name='usid' value='$usi' > <button name='delete_u' type='submit' class='tb-btn d-btn'>
+                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='hidden' size='2' name='usid' value='$usi' > <button name='delete_u' type='submit' class='tb-btn d-btn'>
                 Delete</button> </form></td>";
-                echo "<td> <form method='post' action='../scripts/update_rcd.php'> <input type='hidden' size='2' name='usid' value='$usi' > <button name='update_u' type='submit' class='tb-btn'>
+                echo "<td> <form method='post' action='./scripts/update_rcd.php'> <input type='hidden' size='2' name='usid' value='$usi' > <button name='update_u' type='submit' class='tb-btn'>
+                Update</button> </form></td>";
+                
+                echo "</tr>";
+                
+            }
+          
+        }
+        else {
+            echo "No results";
+        }
+     }
+     
+     ?>
+     </table>
+    </div>
+
+    <!-- +++++++++++++ Bookings Table ++++++++++++++++ -->
+
+
+    <div class="table-cont">
+    <p>Table: Bookings</p>
+    <table class="users">        
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Destination</th>
+            <th>Service</th>
+            <th>Transport</th>
+            <th>Date</th>
+            <th>Ref.Id</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+
+    <?php 
+
+     echo "<br>";
+     $bkc = new mysqli("localhost","root","","travelogue");
+
+     if($bkc->connect_error) {
+        echo "Connect Error";
+     }
+     else {
+        $query_2 = "SELECT id, 	username, destination, hotel, service, vis_date, refid from bookings";
+        $qout_2 = $bkc->query($query_2);
+
+        if($qout_2->num_rows > 0) {
+
+            while($recd_2 = $qout_2->fetch_assoc()) {
+
+                $usi_2 = $recd_2["id"];
+                $usn_2 = $recd_2["username"];
+                $use_2 = $recd_2["destination"];
+                $usp_2 = $recd_2["hotel"];
+                $serv = $recd_2["service"];
+                $vdate = $recd_2["vis_date"];
+                $refid = $recd_2["refid"];
+
+                echo "<tr>";
+
+                echo "<td>".$usi_2."</td>";
+                echo "<td>".$usn_2."</td>";
+                echo "<td>".$use_2."</td>";
+                echo "<td>".$usp_2."</td>";
+                echo "<td>".$serv."</td>";
+                echo "<td>".$vdate."</td>";
+                echo "<td>".$refid."</td>";
+
+                echo "<td> <form method='post' action='###'> <input type='hidden' size='2' name='usid_2' value='$usi_2' > <button name='delete_b' type='submit' class='tb-btn d-btn'>
+                Delete</button> </form></td>";
+                echo "<td> <form method='post' action='###'> <input type='hidden' size='2' name='usid_2' value='$usi_2' > <button name='update_b' type='submit' class='tb-btn'>
                 Update</button> </form></td>";
                 
                 echo "</tr>";
@@ -149,15 +224,31 @@
         }
      }
      
-     ?>
+    ?>
      </table>
     </div>
 
     </section>
 </main>
+  
+<script>
 
-<footer>
-</footer>
-  <script src="./scripts/home-script.js"></script>
+     function tabs(n) {
+        let tabs = document.getElementsByClassName("table-cont");
+        for(let tab_i = 0; tab_i <= tabs.length; ++tab_i) {
+        
+        tabs[tab_i].style.display = "none";
+
+        if(n == tab_i) {
+            tabs[tab_i].style.display = "block";
+            
+        if(n > "0") {
+                tabs[0].style.display = "none";
+            }
+        }
+     }
+    }
+</script>
+
 </body>
 </html>

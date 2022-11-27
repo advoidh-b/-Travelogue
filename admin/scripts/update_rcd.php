@@ -111,7 +111,7 @@
         </h1>
         <p>Note: Re-assigns all record values</p>
 
-    <form method="post" action="./update_2.php">
+    <form method="post" action="update_2.php">
 
 <?php
   $tb_conn = new mysqli('localhost', 'root', '', 'travelogue');

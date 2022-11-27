@@ -245,9 +245,17 @@
 /*+++++++++++++++++++++++++++++++
  Exclusive for adminPanel.php
 ++++++++++++++++++++++++++++++++*/
-
+.pad-overkill {
+  padding-top: 24vh;
+}
+div.form-cont {
+  display: none;
+}
+.def-tab {
+  display: block;
+}
 table {
-  background: var(--bgwhite);
+  background: rgb(241, 241, 120);
   padding: 0.6rem;
   font: 400 1rem var(--fontdef);
 }
