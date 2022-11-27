@@ -136,13 +136,13 @@
             $use = $recd["email"];
             $usp = $recd["password"];
 
-            echo "<input type='text' name='id' value='$usid' placeholder='user id'>";
+            echo "<input type='text' name='id' value='$usid' placeholder='user id' >";
             echo "<input type='text' name='username' value='$usn' placeholder='username'>";
             echo "<input type='text' name='email' value='$use' placeholder='email'>";
             echo "<input type='text' name='password' value='$usp' placeholder='password'>";
         }
     }
-    $tb_conn->close();
+    
  }
 
 ?>

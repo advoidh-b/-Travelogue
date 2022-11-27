@@ -1,6 +1,6 @@
 <?php
 
-$t_conn = new mysqli('localhost', 'root', '', 'travelogue');
+$conn_up = new mysqli('localhost', 'root', '', 'travelogue');
 
 if(isset($_POST['up_btn'])) {
 
@@ -9,12 +9,16 @@ $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$uq = "update users set id='$id', user_name='$username', email='$email', password='$password' ";
+$uq = "update users set user_name='$username', email='$email', password='$password' where id ='$id' ";
 
-if($t_conn->query($uq)) {
+if($conn_up->query($uq)) {
   echo "Record Updated";
+  header("Location: ../adminPanel.php");
+  
 }
 else {
-  echo "Up falied";
+  echo "Failed";
+  echo $conn_up->error;
 }
 } 
+?>

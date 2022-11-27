@@ -54,9 +54,9 @@
 <div class='pad-overkill'></div>
 
   <div class="nav-cont">
-    <a href="#" >
+    <a href="./adminPanel.php" >
       <i class="material-icons">home</i>
-      <span class="nav-label">Home</span>
+      <span class="nav-label">Overview</span>
     </a>
 
     <a href="#" onclick='tabs(0)'>
@@ -106,6 +106,7 @@
         <tr>
             <th>Id</th>
             <th>Username</th>
+            
             <th>Emai</th>
             <th>Password</th>
             <th>Delete</th>
@@ -120,7 +121,7 @@
         echo "Connect Error";
      }
      else {
-        $v_query = "SELECT id, user_name, email, password FROM users";
+        $v_query = "SELECT id,  user_name, email, password FROM users";
         $q_out = $t_conn->query($v_query);
 
         if($q_out->num_rows > 0) {
@@ -131,10 +132,12 @@
                 $usn = $recd["user_name"];
                 $use = $recd["email"];
                 $usp = $recd["password"];
+                
 
                 echo "<tr>";
 
                 echo "<td>".$usi."</td>";
+                
                 echo "<td>".$usn."</td>";
                 echo "<td>".$use."</td>";
                 echo "<td>".$usp."</td>";
@@ -209,7 +212,7 @@
                 echo "<td>".$vdate."</td>";
                 echo "<td>".$refid."</td>";
 
-                echo "<td> <form method='post' action='###'> <input type='hidden' size='2' name='usid_2' value='$usi_2' > <button name='delete_b' type='submit' class='tb-btn d-btn'>
+                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='hidden' size='2' name='usid_2' value='$usi_2' > <button name='delete_b' type='submit' class='tb-btn d-btn'>
                 Delete</button> </form></td>";
                 echo "<td> <form method='post' action='###'> <input type='hidden' size='2' name='usid_2' value='$usi_2' > <button name='update_b' type='submit' class='tb-btn'>
                 Update</button> </form></td>";

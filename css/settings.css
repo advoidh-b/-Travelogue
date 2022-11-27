@@ -255,9 +255,10 @@ div.form-cont {
   display: block;
 }
 table {
-  background: var(--bg);
+  background: var(--bgwhite);
   padding: 0.6rem;
   font: 400 1rem var(--fontdef);
+  box-shadow: 0px 2px 10px rgba(100, 100, 100, 0.2);
 }
  tr {
   padding: 0.4rem 1.0rem;
