@@ -255,7 +255,7 @@ div.form-cont {
   display: block;
 }
 table {
-  background: rgb(241, 241, 120);
+  background: var(--bg);
   padding: 0.6rem;
   font: 400 1rem var(--fontdef);
 }
