@@ -212,9 +212,10 @@
                 echo "<td>".$vdate."</td>";
                 echo "<td>".$refid."</td>";
 
-                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='hidden' size='2' name='usid_2' value='$usi_2' > <button name='delete_b' type='submit' class='tb-btn d-btn'>
+                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='text' size='2' name='usid_2' value='$usi_2' > <button name='delete_b' type='submit' class='tb-btn d-btn'>
                 Delete</button> </form></td>";
-                echo "<td> <form method='post' action='###'> <input type='hidden' size='2' name='usid_2' value='$usi_2' > <button name='update_b' type='submit' class='tb-btn'>
+
+                echo "<td> <form method='post' action='./scripts/update_rcd_b.php'> <input type='text' size='2' name='usid_2' value='$usi_2' > <button name='update_b' type='submit' class='tb-btn'>
                 Update</button> </form></td>";
                 
                 echo "</tr>";
