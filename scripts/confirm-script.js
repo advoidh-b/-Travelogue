@@ -47,13 +47,13 @@ function validateBook() {
          console.log(dt, mt, yr);
          console.log("Hello");
 
-    if( nDay < dt || nDay > 31 || nMn > 12 || nMn < mt || nYr > yr || nYr < yr) {
-        alert("WARNING : Invalid Date Received"); 
-        err_p.textContent = "Invalid Date. Please re-check";
-        let usrInp = document.getElementById('username').value;
-        
-        return false;
-    }
+         if( nDay < dt || nDay > 31 || nMn > 12 || nMn < mt || nYr > yr+1 || nYr < yr) {
+            /* alert("WARNING : Invalid Date Received"); */
+            err_p.textContent = "Invalid Date. Please re-check";
+            let usrInp = document.getElementById('username').value;
+            
+            return false;
+        }
     
 }
 
