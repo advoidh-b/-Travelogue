@@ -28,4 +28,18 @@ if(isset($_POST['delete_b'])) {
         
     }
 }
+/* +++++++++++++ delete general rcd ++++++++++++++ */
+if(isset($_POST['delete_g'])) {
+    $g_id = $_POST['g_id'];
+    $delq_3 = "delete from general where id='$g_id'";
+
+    if($tb_conn->query($delq_3)) {
+        echo "Record Deleted";
+        header("Location: http://localhost/Travelogue/admin/adminPanel.php");
+    }
+    else {
+        echo "Failed to delete".$tb_conn->error;
+        
+    }
+}
 

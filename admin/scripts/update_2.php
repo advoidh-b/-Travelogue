@@ -23,17 +23,16 @@ else {
 } 
 
 /* +++++++++++ BOOKINGS +++++++++++ */
-if(isset($_POST['up_btn_b'])) {
+if(isset($_POST['up_btn_g'])) {
 
-  $id = $_POST['id'];
-  $username = $_POST['username'];
-  $dest = $_POST['dest'];
-  $hot = $_POST['hot'];
-  $serv = $_POST['serv'];
-  $vdate = $_POST['vdate'];
-  $refid = $_POST['refid'];
+  $gid = $_POST['gid'];
+  $gloc = $_POST['gloc'];
+  $ghot = $_POST['ghot'];
+  $gserv = $_POST['gserv'];
+  $gtype = $_POST['gtype'];
+  $gstatus = $_POST['gstatus'];
   
-  $uq = "update bookings set destination='$dest', hotel='$hot', service='$serv', vis_date='$vdate', refid='$refid' where id='$id' ";
+  $uq = "update bookings set location='$gloc', hotel='$ghot', service='$serv', type='$gtype', status='$gstatus' where id='$gid' ";
   
   if($conn_up->query($uq)) {
     echo "Record Updated";

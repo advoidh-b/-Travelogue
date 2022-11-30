@@ -232,7 +232,76 @@
      </table>
     </div>
 
+    <!-- +++++++++++++ Agent Table ++++++++++++++++ -->
+
+    <div class="table-cont">
+    <p>Table: General</p>
+    <table class="users">        
+        <tr>
+            <th>Id</th>
+            <th>Location</th>
+            <th>Hotels</th>
+            <th>Services</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+
+    <?php 
+
+     echo "<br>";
+     $gc = new mysqli("localhost","root","","travelogue");
+
+     if($gc->connect_error) {
+        echo "Connect Error";
+     }
+     else {
+        $query_3 = "SELECT id, 	location, hotel, service, type, status from general";
+        $qout_3 = $gc->query($query_3);
+
+        if($qout_3->num_rows > 0) {
+
+            while($recd_3 = $qout_3->fetch_assoc()) {
+
+                $gid = $recd_3["id"];
+                $gloc = $recd_3["location"];
+                $ghotel = $recd_3["hotel"];
+                $gserv = $recd_3["service"];
+                $gtype = $recd_3["type"];
+                $gstatus = $recd_3["status"];
+
+                echo "<tr>";
+
+                echo "<td>".$gid."</td>";
+                echo "<td>".$gloc."</td>";
+                echo "<td>".$ghotel."</td>";
+                echo "<td>".$gserv."</td>";
+                echo "<td>".$gtype."</td>";
+                echo "<td>".$gstatus."</td>";
+
+                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='text' size='2' name='g_id' value='$gid' > <button name='delete_g' type='submit' class='tb-btn d-btn'>
+                Delete</button> </form></td>";
+
+                echo "<td> <form method='post' action='./scripts/update_rcd_g.php'> <input type='text' size='2' name='g_id' value='$gid' > <button name='update_g' type='submit' class='tb-btn'>
+                Update</button> </form></td>";
+                
+                echo "</tr>";
+                
+            }
+    
+        }
+        else {
+            echo "No results";
+        }
+     }
+     
+    ?>
+     </table>
+    </div>
+
     </section>
+
 </main>
   
 <script>
