@@ -196,7 +196,7 @@
 
                 $usi_2 = $recd_2["id"];
                 $usn_2 = $recd_2["username"];
-                $use_2 = $recd_2["destination"];
+                $usd_2 = $recd_2["destination"];
                 $usp_2 = $recd_2["hotel"];
                 $serv = $recd_2["service"];
                 $vdate = $recd_2["vis_date"];
@@ -206,7 +206,7 @@
 
                 echo "<td>".$usi_2."</td>";
                 echo "<td>".$usn_2."</td>";
-                echo "<td>".$use_2."</td>";
+                echo "<td>".$usd_2."</td>";
                 echo "<td>".$usp_2."</td>";
                 echo "<td>".$serv."</td>";
                 echo "<td>".$vdate."</td>";

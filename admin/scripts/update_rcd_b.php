@@ -143,15 +143,15 @@
 
             echo "<input type='text' name='username' value='$usn_2' placeholder='username'>";
 
-            echo "<input type='text' name='dest' value='$dest' placeholder='email'>";
+            echo "<input type='text' name='dest' value='$dest' placeholder='destination'>";
 
-            echo "<input type='text' name='hot' value='$hot' placeholder='password'>";
+            echo "<input type='text' name='hot' value='$hot' placeholder='hotel'>";
 
-            echo "<input type='text' name='serv' value='$serv' placeholder='password'>";
+            echo "<input type='text' name='serv' value='$serv' placeholder='service/vehicle'>";
 
-            echo "<input type='text' name='vdate' value='$vdate' placeholder='password'>";
+            echo "<input type='text' name='vdate' value='$vdate' placeholder='vis date'>";
 
-            echo "<input type='text' name='refid' value='$refid' placeholder='password'>";
+            echo "<input type='text' name='refid' value='$refid' placeholder='refid'>";
         }
     }
     
