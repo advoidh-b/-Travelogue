@@ -32,7 +32,7 @@ if(isset($_POST['up_btn_g'])) {
   $gtype = $_POST['gtype'];
   $gstatus = $_POST['gstatus'];
   
-  $uq = "update bookings set location='$gloc', hotel='$ghot', service='$serv', type='$gtype', status='$gstatus' where id='$gid' ";
+  $uq = "update general set location='$gloc', hotel='$ghot', service='$gserv', type='$gtype', status='$gstatus' where id='$gid' ";
   
   if($conn_up->query($uq)) {
     echo "Record Updated";
@@ -45,7 +45,7 @@ if(isset($_POST['up_btn_g'])) {
   }
   }
 
-  /* +++++++++++ GENERAL +++++++++++ */
+  /* +++++++++++ Bookings +++++++++++ */
 if(isset($_POST['up_btn_b'])) {
 
   $id = $_POST['id'];

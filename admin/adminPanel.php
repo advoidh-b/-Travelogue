@@ -101,7 +101,7 @@
 <main>
   <section>
     <div class="table-cont" class='def-tab'>
-    <p>Table: users</p>
+    <h3>Table: users</h3>
     <table class="users">        
         <tr>
             <th>Id</th>
@@ -164,7 +164,7 @@
 
 
     <div class="table-cont">
-    <p>Table: Bookings</p>
+    <h3>Table: Bookings</h3>
     <table class="users">        
         <tr>
             <th>Id</th>
@@ -235,7 +235,7 @@
     <!-- +++++++++++++ Agent Table ++++++++++++++++ -->
 
     <div class="table-cont">
-    <p>Table: General</p>
+    <h3>Table: General</h3>
     <table class="users">        
         <tr>
             <th>Id</th>
