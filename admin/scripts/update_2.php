@@ -22,7 +22,30 @@ else {
 }
 } 
 
-/* +++++++++++ GENERAL +++++++++++ */
+  /* +++++++++++ Bookings +++++++++++ */
+if(isset($_POST['up_btn_b'])) {
+
+  $id = $_POST['id'];
+  $destination = $_POST['dest'];
+  $hot = $_POST['hot'];
+  $serv = $_POST['serv'];
+  $vdate = $_POST['vdate'];
+  $refid = $_POST['refid'];
+  
+  $uq_b = "update bookings set destination='$destination', hotel='$hot', service='$serv', vis_date='$vdate', refid='$refid' where id='$id' ";
+  
+  if($conn_up->query($uq_b)) {
+    echo "Record Updated";
+    header("Location: ../adminPanel.php");
+    
+  }
+  else {
+    echo "Failed";
+    echo $conn_up->error;
+  }
+  }
+  
+  /* +++++++++++ GENERAL +++++++++++ */
 if(isset($_POST['up_btn_g'])) {
 
   $gid = $_POST['gid'];
@@ -44,28 +67,5 @@ if(isset($_POST['up_btn_g'])) {
     echo $conn_up->error;
   }
   }
-
-  /* +++++++++++ Bookings +++++++++++ */
-if(isset($_POST['up_btn_b'])) {
-
-  $id = $_POST['id'];
-  $destination = $_POST['dest'];
-  $hot = $_POST['hot'];
-  $serv = $_POST['serv'];
-  $vdate = $_POST['vdate'];
-  $refid = $_POST['refid'];
-  
-  $uq_b = "update bookings set destination='$dest', hotel='$hot', service='$serv', vis_date='$vdate', refid='$refid' where id='$id' ";
-  
-  if($conn_up->query($uq_b)) {
-    echo "Record Updated";
-    header("Location: ../adminPanel.php");
-    
-  }
-  else {
-    echo "Failed";
-    echo $conn_up->error;
-  }
-  } 
 
 ?>
