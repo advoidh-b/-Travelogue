@@ -251,6 +251,9 @@
 div.form-cont {
   display: none;
 }
+.table-cont {
+  display: none;
+}
 .def-tab {
   display: block;
 }

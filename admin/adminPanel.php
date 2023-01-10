@@ -69,6 +69,11 @@
       <span class="nav-label">Booking Record</span>
     </a>
 
+    <a href="#" onclick='tabs(2)'>
+      <i class="material-icons">book</i>
+      <span class="nav-label">General Recd</span>
+    </a>
+
     <a href="#">
       <i class="material-icons">settings</i>
       <span class="nav-label">Settings</span>
@@ -100,7 +105,7 @@
 
 <main>
   <section>
-    <div class="table-cont" class='def-tab'>
+    <div class="table-cont def-tab">
     <h3>Table: users</h3>
     <table class="users">        
         <tr>
