@@ -110,8 +110,11 @@ session_start();
 
 <main>
   
-<section class="sec-1">
-  
+<section class="showcase">
+  <div class="hero">
+    <h1 class="hero-title">Explore places that are beyond your map.</h1>
+    <a href="#exp" id="explore">Start Exploring</a>
+  </div>
 </section>
 
 <section class="sec-2">
@@ -122,7 +125,7 @@ session_start();
     </span>
   </div>
   
-  <div class="cards-container">
+  <div class="cards-container" id="exp">
     
     <div class="cards" onclick="dest('swi', 'Alps, Switzerland', '10', '70%')">
       <img src="./images/loc/swi/1.jpeg" alt="1">

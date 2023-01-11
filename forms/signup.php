@@ -98,7 +98,7 @@ session_start();
             for(i of ip_array)  {
                 if(i =="" || i == "null" || i == "undefined") {
                     
-                    logp.textContent = "Please fill out the above fields";
+                    alert("Cannot be Empty");
                     return false;
                 }
             }

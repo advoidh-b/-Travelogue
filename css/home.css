@@ -18,9 +18,9 @@ html {
 */
 
 :root {
-  --bg: #f4f1f1;
+  --bg: #e5e9f0;
   --cardbg: #f8f7f8;
-  --defcol: #05445e;
+  --accent: #05445e;
   --textcol: #757785;
   --f-white: #fffeff;
   --bg-white: #fefefe;
@@ -49,7 +49,7 @@ header {
   grid-area: hd;
   padding: 0.6rem 2.2rem;
   margin-top: 0;
-  background: var(--bg-white);
+  background: var(--bg);
 }
 header a {
   text-decoration: none;
@@ -70,7 +70,7 @@ div.logo-container {
 }
 a.logo {
   font: 600 18pt var(--deffont);
-  color: var(--defcol);
+  color: var(--accent);
 }
 div.nav-profile {
   display: flex;
@@ -91,8 +91,8 @@ div.top-nav > a {
  padding: 0.6rem;
 }
 div.top-nav > a:hover, div.top-nav > a:active  {
-  border-bottom: 2px solid var(--defcol);
-  color: var(--defcol);
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
 }
 div.avatar {
   width: 46px;
@@ -119,9 +119,11 @@ aside, div.account-card, .acc-link, .acc-avatar {
 }
 aside {
   grid-area: as;
-  background: var(--dark-card);
+  background: #eee;
+  /* border-left: 10px solid var(--bg); */
   flex-flow: column wrap;
-  box-shadow: 0px 2px 10px rgba(100, 100, 100, 0.2);  
+  /* box-shadow: 0px 2px 10px rgba(100, 100, 100, 0.2);   */
+  
 }
 aside a {
   text-decoration: none;
@@ -131,11 +133,9 @@ div.aside-cont {
   top: 0;
   bottom: 0;
   z-index: 99;
-  background: var(--dark-card);
 }
 div.account-card {
  width: 100%;
- background: var(--defcol);
  padding: 2.0rem 0.8rem;
  justify-content: center;
 }
@@ -165,7 +165,7 @@ img.user-dp {
   border-radius: inherit;
 }
 div.nav-cont {
-  background: var(--dark-card);
+  background: none;
   position: relative;
   width: 200px;
   max-width: 200px;
@@ -174,11 +174,11 @@ div.nav-cont  > a {
     padding: 0.6rem 1.2rem;
     font: 400 1rem var(--deffont);
     background: none;
-    color: var(--sub-white);
+    color: var(--dark-card);
     display: flex;
     align-items: center;
     width: 100%;
-    margin: 0.8rem 0 0;
+    margin: 1.4rem 0 0;
 }
 a.ad {
   display: flex;
@@ -201,7 +201,37 @@ main {
 section {
   padding: 0 2.0rem 1.6rem;
 }
-
+section.showcase {
+  width: 100%;
+  background-image: url(../images/showcase.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 300pt;
+  max-height: 60vh;
+  margin: 1.2rem 0 2.0rem;
+  display: flex;
+  align-items: center;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+}
+.hero-title {
+  font: 500 2.2rem var(--deffont);
+  color: var(--sub-white);
+}
+a#explore {
+  padding: 0.8rem 3.2rem;
+  background-color: var(--bg);
+  border: 1px solid #fff;
+  letter-spacing: 1px;
+  color: #333;
+  font-size: inherit;
+  text-decoration: none;
+}
 section.sec-2 {
   width: 100%;
   padding: 0 2.0rem 0;
@@ -253,7 +283,7 @@ div.loc-details > p, div.loc-details > span {
   text-decoration: none;
 }
 div.loc-details > p {
-  color: var(--defcol);
+  color: var(--accent);
   font: 500 1.rem var(--deffont);
   margin: 0 0 0.2rem;
   color: var(--textcol);
@@ -262,7 +292,7 @@ div.loc-details > span {
   font-size: 0.8rem;
   display: block;
   margin: 0;
-  color: var(--defcol);
+  color: var(--accent);
 }
 
 .star {
@@ -284,8 +314,8 @@ a.view-more {
   text-decoration: none;
   padding: 0.6rem 2.2rem;
   width: 30%;
-  color: var(--defcol);
-  border: 1px solid var(--defcol);
+  color: var(--accent);
+  border: 1px solid var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,7 +344,7 @@ div.news-c-t {
 div.news-c-t > h1 {
   font: 400 1.0rem var(--deffont);
   margin: 0 0 0.8rem;
-  color: var(--defcol);
+  color: var(--accent);
 }
 div.news-content-1 {
   width: 100%;
@@ -460,11 +490,13 @@ div.foot-contact a:hover {
   }
   aside {
     background: var(--dark-card);
+    border: none;
     position: fixed;
     z-index: 999;
     bottom: 0;
     left: 0;
     right: 0;
+    border: none;
   }
   div.account-card {
     display: none;
@@ -501,7 +533,13 @@ div.foot-contact a:hover {
   div.top-nav {
     display: none;
   }
-
+section.showcase {
+  margin: 1.2rem 0 0;
+}
+h1.hero-title {
+  font-size: 1.8rem;
+  text-align: center;
+}
 section.sec-1 {
   padding: 0 1.6rem;
   margin-top: 1.6rem;

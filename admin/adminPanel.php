@@ -29,14 +29,14 @@
   <nav class="nav-panel">
 
     <div class="logo-container">
-      <a href="#" class="logo">
-       Admin.Travelogue
+      <a href="#">
+       ADMINISTRATOR[1]
       </a>
     </div>
      <div class="nav-profile">
     <div class="top-nav">
-      <a href="">HOME</a>
-       <a href="">GALLERY</a>
+      <!-- <a href="">HOME</a>
+       <a href="">GALLERY</a> -->
     </div>
     </div>
 
@@ -51,32 +51,36 @@
   <div class="aside-cont">
 
   
-<div class='pad-overkill'></div>
+<div class='title'>
+  <H1>
+    PANEL CONTROLS
+  </H1>
+</div>
 
   <div class="nav-cont">
     <a href="./adminPanel.php" >
       <i class="material-icons">home</i>
-      <span class="nav-label">Overview</span>
-    </a>
-
-    <a href="#" onclick='tabs(0)'>
-      <i class="material-icons">book</i>
-      <span class="nav-label"> User Record</span>
+      <span class="nav-label">OVERVIEW</span>
     </a>
 
     <a href="#" onclick='tabs(1)'>
       <i class="material-icons">book</i>
-      <span class="nav-label">Booking Record</span>
+      <span class="nav-label"> USER DATA</span>
     </a>
 
     <a href="#" onclick='tabs(2)'>
       <i class="material-icons">book</i>
-      <span class="nav-label">General Recd</span>
+      <span class="nav-label">BOOKINGS</span>
+    </a>
+
+    <a href="#" onclick='tabs(3)'>
+      <i class="material-icons">book</i>
+      <span class="nav-label">GENERAL RCD</span>
     </a>
 
     <a href="#">
       <i class="material-icons">settings</i>
-      <span class="nav-label">Settings</span>
+      <span class="nav-label">SETTINGS</span>
     </a>
     <a href="#">
       <i class="material-icons"></i>
@@ -105,14 +109,57 @@
 
 <main>
   <section>
-    <div class="table-cont def-tab">
+    <div class='table-cont def-tab'>
+      <h1 class="titles">
+        Statistics
+      </h1>
+    <div class="statis">
+    <?php 
+      // $con1 = new mysqli("localhost","root","","travelogue");
+      // $cq = 'select * from user';
+      // if($res_1 = mysqli_query($con1, $cq)) {
+      //    $row_u = mysqli_num_rows($res_1);
+      //    echo $row_u;
+      // }
+    ?> 
+    <div class="stat-card-cont">
+      <div class='stats-card'>
+        <h1>4</h1>
+      </div>
+      <h1 class="stat-card-desc">
+        DB Records
+      </h1>
+    </div>
+
+    <div class="stat-card-cont">
+      <div class='stats-card'>
+        <h1>3</h1>
+      </div>
+      <h1 class="stat-card-desc">
+        Recent Entries
+      </h1>
+    </div>
+
+    <div class="stat-card-cont">
+      <div class='stats-card'>
+        <h1>5</h1>
+      </div>
+      <h1 class="stat-card-desc">
+        Active Records
+      </h1>
+    </div>
+
+    
+    </div>
+    </div>
+    <div class="table-cont">
     <h3>Table: users</h3>
     <table class="users">        
         <tr>
             <th>Id</th>
             <th>Username</th>
             
-            <th>Emai</th>
+            <th>Email</th>
             <th>Password</th>
             <th>Delete</th>
             <th>Update</th>
@@ -128,7 +175,9 @@
      else {
         $v_query = "SELECT id,  user_name, email, password FROM users";
         $q_out = $t_conn->query($v_query);
-
+        $allq = 'select * from users';
+       
+        
         if($q_out->num_rows > 0) {
 
             while($recd = $q_out->fetch_assoc()) {
