@@ -153,7 +153,7 @@
     </div>
     </div>
     <div class="table-cont">
-    <h3>Table: users</h3>
+    <h3>: Users</h3>
     <table class="users">        
         <tr>
             <th>Id</th>
@@ -214,11 +214,11 @@
      </table>
     </div>
 
-    <!-- +++++++++++++ Bookings Table ++++++++++++++++ -->
+    <!-- +++++++++++++ Bookings  ++++++++++++++++ -->
 
 
     <div class="table-cont">
-    <h3>Table: Bookings</h3>
+    <h3>: Bookings</h3>
     <table class="users">        
         <tr>
             <th>Id</th>
@@ -286,10 +286,10 @@
      </table>
     </div>
 
-    <!-- +++++++++++++ Agent Table ++++++++++++++++ -->
+    <!-- +++++++++++++ Agent  ++++++++++++++++ -->
 
     <div class="table-cont">
-    <h3>Table: General</h3>
+    <h3>: General</h3>
     <table class="users">        
         <tr>
             <th>Id</th>
