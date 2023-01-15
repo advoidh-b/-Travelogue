@@ -186,12 +186,13 @@ table {
   background: #55555f;
 }
  td {
-  padding: 0.8rem;
+  padding: 0.4rem 0.6rem;
  }
  .tb-btn {
     padding: 0.6rem; 
     margin: auto;
     border: none;
+    border-radius: 3pt;
  }
  .d-btn {
   background: #d66;

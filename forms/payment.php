@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+include("../php/connection.php");
+include("../php/functions.php");
+
+$user_data = check_login($con);
+
+$usname = $user_data['user_name'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +23,7 @@
 </head>
 <body>
     <section class="form-sec">
-        <form action="pay.php" method="post">
+        <form action="../scripts/pay_confirm.php" method="post">
             <h1>
                 Enter card details
             </h1>
@@ -18,7 +31,8 @@
             <div class="ip-rows">
             <div class="ip-cont">
             <label for="">Card holder's name</label>
-            <input type="text" name="ownname" class="ip ip-block " maxlength="25" placeholder="John Doe" required>
+            <input type="text" name="holdname" class="ip ip-block " maxlength="25" placeholder="John Doe" required>
+            <input type="text" name="username" id="" value="<?php echo $usname; ?>">
             <label for="">Card Number</label>
             <input type="text" name="cardno" class="ip ip-block " maxlength="12" placeholder="XXXXXXXXXXXX" required>
             </div>
@@ -30,7 +44,7 @@
             <input type="text" name="expiry" class="ip ip-block" maxlength="4" size="5" placeholder="XXXX">
             </div>
             </div>
-            <button class="pay">Pay Amount</button>
+            <button class="pay" name="pay" type="submit">Pay Amount</button>
         </form>
     </section>
 </body>

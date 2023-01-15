@@ -43,7 +43,7 @@ $query_i = ("insert into bookings(username, destination, hotel, service, vis_dat
 
 <?php
     if($conn->query($query_i)) {
-    echo "<a href='../forms/user_settings.php' class='confirm-bk'>View in Bookings</a>";
+    echo "<a href='../forms/payment.php' class='confirm-bk'>Make Payment</a>";
 
     $conn->close();
 }
