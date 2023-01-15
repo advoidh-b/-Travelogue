@@ -92,12 +92,12 @@ session_start();
       <span class="nav-label">Search</span>
     </a>
 
-    <a href="#">
+    <a href="./forms/user_settings.php#bookingsh">
       <i class="material-icons">book</i>
       <span class="nav-label">Bookings</span>
     </a>
 
-    <a href="#">
+    <a href="./forms/user_settings.php">
       <i class="material-icons">settings</i>
       <span class="nav-label">Settings</span>
     </a>
@@ -249,7 +249,7 @@ session_start();
  
  <div class="news-content-1">
    
-     <div class="loc-det-cont">
+     <div class="loc-det-cont" onclick="dest('win', 'Caribbean', '10', '70%')>
       <a href="#" id="location-a">
         <i class="material-icons loc-ico">
           location_on

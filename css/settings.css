@@ -31,12 +31,14 @@
     --textdark: #38383f;
     --fontdef: "Figtree", sans-serif;
   }
+  html {
+    font-family: var(--fontdef);
+  }
   /* material icons fix */
   .mi-n {
     padding-top: 3.6px;
   }
   body {
-
     background: #21212c;
     color: var(--textsub);
     margin: 0;
@@ -45,11 +47,51 @@
   header {
     background: none;
   }
-  /* flexset 1 */
-  div.title {
-    padding: 2rem 1.0rem;
-    font-size: 0.88rem;
+  div.bhome {
+    background: #eef;
+    padding: 1.2rem 4.0rem;
   }
+  a.back {
+    text-decoration: none;
+    color: var(--textsub);
+    display: flex;
+    align-items: center;
+    max-width: 20%;
+  }
+  section.sec-one {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg);
+    padding: 2.0rem 2.0rem;
+    display: flex;
+    flex-flow: row wrap;
+  }
+div.user-profile-cont {
+    width: auto;
+    padding: 0.8rem 2.0rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.user-avatar > img {
+  width: 6.0rem;
+  height: 6.0rem;
+  border-radius: 50%;
+}
+.user-creds > p {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  font: 400 1.4rem var(--fontdef);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.edit-creds {
+  margin-left: auto;
+  justify-self: flex-end;
+  color: var(--accent);
+}
+
+  /* flexset 1 */
 
   div.nav-cont > a:hover,
   div.nav-cont > a:focus {
@@ -59,66 +101,66 @@
   .nav-label {
     margin-left: 0.6rem;
   }
+  div.tabs-title {
+    width: 100%;
+    margin: 0 2rem;
+  }
+  div.tabs-title > h1 {
+    font: 300 1.26rem var(--fontdef);
+    border-bottom: 2px solid #eee;
+    padding: 0.2rem;
+  }
 
-  div.tabs-cont > a {
-    text-align: center;
-    text-decoration: none;
-    color: var(--textsub);
-    background: var(--bgwhite);
-    padding: 0.8rem 2.0rem;
-    margin-right: 0.8rem;
-    font: 500 1.2rem var(--fontdef);
-  }
-  div.tabs-cont > a:hover {
-    border-bottom: 4px solid var(--accent);
-  }
   div.tabDiv {
-    width: 60%;
-    background: var(--bgwhite);
-    border-bottom: 4px solid #05445e;
+    width: 40%;
+    background: #eef;
+    box-shadow: 1px 1px 12px #33333340;
     padding: 0.8rem;
-    margin: 1.2rem 0;
-    display: none;
+    margin: 0 2.0rem 2.0rem;
+    font-weight: 300;
+  }
+  div.logoutDiv {
+    width: 100%;
+    
+    background: none;
+    box-shadow: none;
   }
   .cancel {
-    text-decoration: none;
-   background: var(--accent);
+   text-decoration: none;
+   background: none;
    text-align: center;
    margin: 1.6rem 0 0.8rem;
-   padding: 0.8rem;
+   padding: 0.8rem 1.2rem;
    font: 400 1rem var(--fontdef);
-   border: none;
+   border: 1px solid #d66;
    border-radius: 2pt;
-   color: var(--textwhite);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 20%;
+   color: #d66;
   }
+
   div.def-tab {
     display: block;
   }
   a.logout {
-    color: var(--sub-white);
-    background: var(--defcol);
-    border: none;
-  }
-  a.logout, a.sign-up {
-    padding: 0.6rem;
-    max-width: 220px;
-    font: 400 1rem var(--deffont);
     text-decoration: none;
-    max-width: 220px;
-    width: 220px;
-    display: block;
-    margin: auto;
+    background: none;
+    text-align: center;
+    margin: 1.6rem 0 0.8rem;
+    padding: 0.8rem;
+    font: 400 0.8rem var(--fontdef);
+    border: 1px solid var(--accent);
+    border-radius: 2pt;
+    color: var(--accent);
   }
+
 
 /*+++++++++++++++++++++++++++++++
  Exclusive for adminPanel.php
 ++++++++++++++++++++++++++++++++*/
 .pad-overkill {
-  padding-top: 24vh;
+  padding-top: 20vh;
+}
+.nav-cont {
+  min-height: 100vh;
 }
 div.form-cont {
   display: none;
@@ -186,7 +228,7 @@ table {
   background: #55555f;
 }
  td {
-  padding: 0.4rem 0.6rem;
+  padding: 0.48rem 0.6rem;
  }
  .tb-btn {
     padding: 0.6rem; 

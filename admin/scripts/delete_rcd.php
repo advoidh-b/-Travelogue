@@ -43,3 +43,17 @@ if(isset($_POST['delete_g'])) {
     }
 }
 
+/* +++++++++++++ delete general rcd ++++++++++++++ */
+if(isset($_POST['delete_c'])) {
+    $c_id = $_POST['c_id'];
+    $delq_4 = "delete from carddetails where id='$c_id'";
+
+    if($tb_conn->query($delq_4)) {
+        echo "Record Deleted";
+        header("Location: http://localhost/Travelogue/admin/adminPanel.php");
+    }
+    else {
+        echo "Failed to delete".$tb_conn->error;
+        
+    }
+}

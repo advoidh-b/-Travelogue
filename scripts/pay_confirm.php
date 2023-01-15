@@ -10,9 +10,11 @@ if(isset($_POST['pay'])) {
     $cvv = $_POST['cvv'];
     $expiry = $_POST['expiry'];
 
-    // $q_in = "insert into carddetails (username, holdername, cardno, cvv, expiry) values ('$username', '$holdname', '$cardno', '$cvv', '$expiry')";
+    $q_in = "insert into carddetails (username, holdername, cardno, cvv, expiry) values ('$username', '$holdname', '$cardno', '$cvv', '$expiry')";
 
-    $q_up = "update carddetails set holdername='$holdname', cardno='69', cvv='$cvv', expiry='$expiry' where username='$username'";
+    $carddet_con->query($q_in);
+    
+    $q_up = "update carddetails set username='$username', holdername='$holdname', cardno='$cardno', cvv='$cvv', expiry='$expiry' where username='$username'";
 
     if($carddet_con->query($q_up)) {
         echo "Successful";

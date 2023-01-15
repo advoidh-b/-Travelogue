@@ -9,7 +9,8 @@
     else {
         $cancel_q = "delete from bookings where username='$usname'";
         if($conn->query($cancel_q)) {
-            echo "Booking cancelled";
+            echo "<script> alert('Booking Cancelled'); </script>";
+            header("Location: ../forms/user_settings.php");
             $conn->close();
         }
         else {

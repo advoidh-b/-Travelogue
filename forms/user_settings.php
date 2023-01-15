@@ -31,15 +31,34 @@ session_start();
 
 </head>
 <body>
+        <div class='bhome'>
+            <a href="../home.php" class='back'>
+                <i class='material-icons'>arrow_lefthome</i>
+                &nbsp; &nbsp; Back to Home
+            </a>
+        </div>
     <section class="sec-one">
-        <div class="tabs-cont"> 
-            <a href="#" onclick="tabs(0)">Bookings</a>
-            <a href="#" onclick="tabs(1)">Two</a>
-            <a href="#" onclick="tabs(2)">Three</a>
+
+        <div class="user-profile-cont">
+            <div class="user-avatar">
+                <img src="../images/dp/bean-lisa.jpg" alt="user dp">
+            </div>
+            <div class="user-creds">
+                <p><?php echo $usname; ?></p>
+            </div>
+            <div class="edit-creds">
+                <a href="http://localhost/travelogue/php/logout.php" class="logout">
+              LOG OUT
+                </a>
+            </div>
+        </div>
+
+        <div class="tabs-title"> 
+            <h1>Account Data</h1>
         </div>
 
             <div class="tabDiv def-tab">
-            <h1>Active Booking:</h1>
+            <h3 id='bookingsh'>Active Bookings</h3>
 
         <?php
             $t_conn = new mysqli("localhost","root","","travelogue");
@@ -76,46 +95,74 @@ session_start();
                    echo "No results";
                }
             }
-        ?>
+        ?> 
             <form action="./cancel.php" method="post">
 
              <input type='hidden' name='usname' value='<?php echo $usname ?>'>
              <input type="submit" name="cancel"
-             value="Cancel" class="cancel">
+             value="Cancel Booking" class="cancel">
 
             </form>
             </div>
 
             <div class="tabDiv">
-                tab2
+            <h3>Active Cards / Payments</h3>
+            <?php
+            $tcon_2 = new mysqli("localhost","root","","travelogue");
+     
+            if($tcon_2->connect_error) {
+               echo "Connect Error";
+            }
+            else {
+               $q2 = "SELECT holdername FROM carddetails where username='$usname' limit 1";
+
+               $q_out2 = $tcon_2->query($q2);
+       
+               if($q_out2->num_rows > 0) {
+       
+                   while($recd_c = $q_out2->fetch_assoc()) {
+       
+                       $holdname = $recd_c["holdername"];
+                       
+                    echo "<p>Card holder: ".$holdname."</p>";
+                    echo "<p>Card no: XXXX XXXX XXXX</p>";
+                    
+                   }
+                   $tcon_2->close();
+           
+               }
+               else {
+                   echo "No results";
+               }
+            }
+        ?> 
             </div>
 
-            <div class="tabDiv">
-            <a href="http://localhost/travelogue/php/logout.php" class="logout">
-                    Log Out
-                </a>
-            </div>
+            
+
+        <div>
         
+        </div>
     </section>
 
     <!-- *********** Script ************ -->
     <script>
 
-     function tabs(n) {
-        let tabs = document.getElementsByClassName("tabDiv");
-        for(let tab_i = 0; tab_i <= tabs.length; ++tab_i) {
+    //  function tabs(n) {
+    //     let tabs = document.getElementsByClassName("tabDiv");
+    //     for(let tab_i = 0; tab_i <= tabs.length; ++tab_i) {
         
-        tabs[tab_i].style.display = "none";
+    //     tabs[tab_i].style.display = "none";
 
-        if(n == tab_i) {
-            tabs[tab_i].style.display = "block";
+    //     if(n == tab_i) {
+    //         tabs[tab_i].style.display = "block";
             
-        if(n > "0") {
-                tabs[0].style.display = "none";
-            }
-        }
-     }
-    }
+    //     if(n > "0") {
+    //             tabs[0].style.display = "none";
+    //         }
+    //     }
+    //  }
+    // }
 </script>
 
 </body>

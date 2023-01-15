@@ -51,11 +51,9 @@
   <div class="aside-cont">
 
   
-<div class='title'>
-  <H1>
-    PANEL CONTROLS
-  </H1>
-</div>
+  <div class='pad-overkill'>
+    <p style='text-align: center; font-size: 1.2rem; margin-bottom: 1.6rem;'>Panel Controls</p>
+  </div>
 
   <div class="nav-cont">
     <a href="./adminPanel.php" >
@@ -78,30 +76,19 @@
       <span class="nav-label">GENERAL RCD</span>
     </a>
 
+    <a href="#" onclick='tabs(4)'>
+      <i class="material-icons">book</i>
+      <span class="nav-label">PAY CREDS</span>
+    </a>
+
+
     <a href="#">
       <i class="material-icons">settings</i>
       <span class="nav-label">SETTINGS</span>
     </a>
-    <a href="#">
-      <i class="material-icons"></i>
-      <span class="nav-label"></span>
-    </a>
-    <a href="#">
-      <i class="material-icons"></i>
-      <span class="nav-label"></span>
-    </a>
-    <a href="#">
-      <i class="material-icons"></i>
-      <span class="nav-label"></span>
-    </a>
-    <a href="#">
-      <i class="material-icons"></i>
-      <span class="nav-label"></span>
-    </a>
+    
 
   </div>
-
-  <div class='pad-overkill'></div>
 
 </div>
 
@@ -266,10 +253,10 @@
                 echo "<td>".$vdate."</td>";
                 echo "<td>".$refid."</td>";
 
-                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='text' size='2' name='usid_2' value='$usi_2' > <button name='delete_b' type='submit' class='tb-btn d-btn'>
+                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='hidden' size='2' name='usid_2' value='$usi_2' > <button name='delete_b' type='submit' class='tb-btn d-btn'>
                 Delete</button> </form></td>";
 
-                echo "<td> <form method='post' action='./scripts/update_rcd_b.php'> <input type='text' size='2' name='usid_2' value='$usi_2' > <button name='update_b' type='submit' class='tb-btn'>
+                echo "<td> <form method='post' action='./scripts/update_rcd_b.php'> <input type='hidden' size='2' name='usid_2' value='$usi_2' > <button name='update_b' type='submit' class='tb-btn'>
                 Update</button> </form></td>";
                 
                 echo "</tr>";
@@ -334,10 +321,10 @@
                 echo "<td>".$gtype."</td>";
                 echo "<td>".$gstatus."</td>";
 
-                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='text' size='2' name='g_id' value='$gid' > <button name='delete_g' type='submit' class='tb-btn d-btn'>
+                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='hidden' size='2' name='g_id' value='$gid' > <button name='delete_g' type='submit' class='tb-btn d-btn'>
                 Delete</button> </form></td>";
 
-                echo "<td> <form method='post' action='./scripts/update_rcd_g.php'> <input type='text' size='2' name='g_id' value='$gid' > <button name='update_g' type='submit' class='tb-btn'>
+                echo "<td> <form method='post' action='./scripts/update_rcd_g.php'> <input type='hidden' size='2' name='g_id' value='$gid' > <button name='update_g' type='submit' class='tb-btn'>
                 Update</button> </form></td>";
                 
                 echo "</tr>";
@@ -354,6 +341,73 @@
      </table>
     </div>
 
+    <!-- +++++++++++++ Agent  ++++++++++++++++ -->
+
+    <div class="table-cont">
+    <h3>: General</h3>
+    <table class="users">        
+        <tr>
+            <th>Id</th>
+            <th>Location</th>
+            <th>Hotels</th>
+            <th>Services</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+
+    <?php 
+
+     echo "<br>";
+     $gc = new mysqli("localhost","root","","travelogue");
+
+     if($gc->connect_error) {
+        echo "Connect Error";
+     }
+     else {
+        $query_4 = "SELECT id, username, holdername, cardno, cvv, expiry from carddetails";
+        $qout_4 = $gc->query($query_4);
+
+        if($qout_4->num_rows > 0) {
+
+            while($recd_4 = $qout_4->fetch_assoc()) {
+
+                $cid = $recd_4["id"];
+                $username = $recd_4["username"];
+                $holdername = $recd_4["holdername"];
+                $cardno = $recd_4["cardno"];
+                $cvv = $recd_4["cvv"];
+                $expiry = $recd_4["expiry"];
+
+                echo "<tr>";
+
+                echo "<td>".$cid."</td>";
+                echo "<td>".$username."</td>";
+                echo "<td>".$holdername."</td>";
+                echo "<td>".$cardno."</td>";
+                echo "<td>".$cvv."</td>";
+                echo "<td>".$expiry."</td>";
+
+                echo "<td> <form method='post' action='./scripts/##'> <input type='hidden' size='2' name='cid' value='$cid' > <button name='delete_g' type='submit' class='tb-btn d-btn'>
+                Delete</button> </form></td>";
+
+                echo "<td> <form method='post' action='./scripts/##'> <input type='hidden' size='2' name='cid' value='$cid' > <button name='update_g' type='submit' class='tb-btn'>
+                Update</button> </form></td>";
+                
+                echo "</tr>";
+                
+            }
+    
+        }
+        else {
+            echo "No results";
+        }
+     }
+     
+    ?>
+     </table>
+    </div>
     </section>
 
 </main>

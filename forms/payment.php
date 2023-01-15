@@ -32,14 +32,14 @@ $usname = $user_data['user_name'];
             <div class="ip-cont">
             <label for="">Card holder's name</label>
             <input type="text" name="holdname" class="ip ip-block " maxlength="25" placeholder="John Doe" required>
-            <input type="text" name="username" id="" value="<?php echo $usname; ?>">
+            <input type="hidden" name="username" id="" value="<?php echo $usname; ?>">
             <label for="">Card Number</label>
             <input type="text" name="cardno" class="ip ip-block " maxlength="12" placeholder="XXXXXXXXXXXX" required>
             </div>
 
             <div class="ip-cont">
             <label for="">CVV</label>
-            <input type="password" name="cvv" class="ip ip-block" maxlength="3" size="3" placeholder="XXX" required>
+            <input type="text" name="cvv" class="ip ip-block" maxlength="3" size="3" placeholder="XXX" required>
             <label for="">Expiry</label>
             <input type="text" name="expiry" class="ip ip-block" maxlength="4" size="5" placeholder="XXXX">
             </div>
