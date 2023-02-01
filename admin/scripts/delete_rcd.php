@@ -43,13 +43,13 @@ if(isset($_POST['delete_g'])) {
     }
 }
 
-/* +++++++++++++ delete general rcd ++++++++++++++ */
+/* +++++++++++++ delete payments rcd ++++++++++++++ */
 if(isset($_POST['delete_c'])) {
-    $c_id = $_POST['c_id'];
+    $c_id = $_POST['cid'];
     $delq_4 = "delete from carddetails where id='$c_id'";
 
     if($tb_conn->query($delq_4)) {
-        echo "Record Deleted";
+        echo "Pay Record Deleted";
         header("Location: http://localhost/Travelogue/admin/adminPanel.php");
     }
     else {

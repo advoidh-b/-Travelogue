@@ -32,7 +32,9 @@
 --textdark: #38383f;
 --fontdef: "Figtree", sans-serif;
 }
-
+a {
+  text-decoration: none;
+}
 body {
 font: 400 14px var(--fontdef);
 background: #ddd;
@@ -85,4 +87,38 @@ input[type="text"], .create-acc-btn {
 width: 100%;
 min-width: 100%;
 }
+}
+
+/* Exclusive for Agent panel */
+
+header {
+  padding: 1.2rem 2.0rem;
+  margin: 0;
+  background: whitesmoke;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rcd-nav-cont > a {
+  margin-left: 1.2rem;
+  text-transform: uppercase;
+}
+section.agent-stat {
+  padding: 1.2rem 2.0rem;
+  margin: 1.2rem 0;
+  background: whitesmoke;
+}
+section.agent-stat h2 {
+  font: 300 1.4rem var(--fontdef);
+}
+select#select1, button#status-up {
+  padding: 0.8rem 1.0rem;
+  border: 1px solid #fff;
+}
+button#status-up {
+  background: var(--accent);
+  color: var(--textwhite);
+  margin-left: 0.8rem;
 }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,7 +144,6 @@
         <tr>
             <th>Id</th>
             <th>Username</th>
-            
             <th>Email</th>
             <th>Password</th>
             <th>Delete</th>
@@ -389,7 +387,7 @@
                 echo "<td>".$cvv."</td>";
                 echo "<td>".$expiry."</td>";
 
-                echo "<td> <form method='post' action='./scripts/##'> <input type='hidden' size='2' name='cid' value='$cid' > <button name='delete_g' type='submit' class='tb-btn d-btn'>
+                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='hidden' size='2' name='cid' value='$cid' > <button name='delete_c' type='submit' class='tb-btn d-btn'>
                 Delete</button> </form></td>";
 
                 echo "<td> <form method='post' action='./scripts/##'> <input type='hidden' size='2' name='cid' value='$cid' > <button name='update_g' type='submit' class='tb-btn'>
