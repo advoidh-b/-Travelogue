@@ -137,7 +137,69 @@
 
     
     </div>
+
+    <h3>: Users</h3>
+    <table class="users">        
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+
+    <?php 
+     echo "<br>";
+     $t_conn = new mysqli("localhost","root","","travelogue");
+
+     if($t_conn->connect_error) {
+        echo "Connect Error";
+     }
+     else {
+        $v_query = "SELECT id,  user_name, email, password FROM users";
+        $q_out = $t_conn->query($v_query);
+        $allq = 'select * from users';
+       
+        
+        if($q_out->num_rows > 0) {
+
+            while($recd = $q_out->fetch_assoc()) {
+
+                $usi = $recd["id"];
+                $usn = $recd["user_name"];
+                $use = $recd["email"];
+                $usp = $recd["password"];
+                
+
+                echo "<tr>";
+
+                echo "<td>".$usi."</td>";
+                
+                echo "<td>".$usn."</td>";
+                echo "<td>".$use."</td>";
+                echo "<td>".$usp."</td>";
+                echo "<td> <form method='post' action='./scripts/delete_rcd.php'> <input type='hidden' size='2' name='usid' value='$usi' > <button name='delete_u' type='submit' class='tb-btn d-btn'>
+                Delete</button> </form></td>";
+                echo "<td> <form method='post' action='./scripts/update_rcd.php'> <input type='hidden' size='2' name='usid' value='$usi' > <button name='update_u' type='submit' class='tb-btn'>
+                Update</button> </form></td>";
+                
+                echo "</tr>";
+                
+            }
+          
+        }
+        else {
+            echo "No results";
+        }
+     }
+     
+     ?>
+     </table>
+
     </div>
+
+
     <div class="table-cont">
     <h3>: Users</h3>
     <table class="users">        
