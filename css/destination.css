@@ -1,0 +1,311 @@
+/* *****************************
+   * Author: Advoidh B
+   * for: Travelogue(TM) 
+   * Date: 29-10-2022
+***************************** */
+* {
+    box-sizing: border-box;
+  }
+  html {
+    font: 400 16px var(--fontdef);
+    scroll-behavior: smooth;
+  }
+  
+  /* #### hide Scrollbars ####
+  html {
+    scrollbar-width:  none;
+    -ms-overflow-style: none;
+  } 
+  ::scrollbar, ::-webkit-scrollbar {
+    display: none;
+  }
+  */
+  
+  :root {
+    --fwhite: #fffeff;
+    --accent: #05445e;
+    --green: #4c6;
+
+    --bg: #f4f4f1;
+    --bgwhite: #fefeff;
+    --cardbg: #f8f7f8;
+    --carddark: #1B2232;
+
+    --textsub: #757785;
+    --textwhite: #efefff;
+    --textdark: #38383f;
+    --fontdef: "Figtree", sans-serif;
+  }
+  /* material icons fix */
+  .mi-n {
+    padding-top: 3.6px;
+  }
+  body {
+    display: grid;
+    grid-template: "sc mn" 100vh 
+                    / 1fr 2fr;
+    font: 400 1rem var(--fontdef);
+    background: var(--bg);
+    color: var(--textsub);
+    margin: 0;
+    padding: 0;
+  }
+  section.left {
+    grid-area: sc;
+    
+    position: relative;
+    background-color: #000;
+    background-image: url("../images/hero-img.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  div.back {
+    position: absolute;
+    z-index: 10;
+    top: 0.8rem;
+    left: 0.8rem;
+    background: none;
+  }
+  a.back-btn {
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: var(--textwhite);
+  }
+  a.back-btn > i {
+    text-shadow: 1px 1px 4px #11111160;
+    font-size: 2.0rem;
+    padding: 0.6rem;
+  }
+  div.img-gallery {
+    position: absolute;
+    z-index: 9;
+    bottom: 4rem;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    margin: 0;
+    padding: 0.6rem;
+    display: block;
+  }
+ .img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    margin: auto;
+    box-shadow: 1px 1px 8px #33333380;
+    border-radius: 2pt;
+  }
+  .def-img {
+    display: block;
+  }
+  div.switch-cont {
+    position: absolute;
+    z-index: 11;
+    bottom: 2.0rem;
+    width: 100%;
+    padding: 0.6rem;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div.switch-cont > a {
+    height: 0.8rem;
+    width: 0.8rem;
+    background: var(--bgwhite);
+    box-shadow: 1px 1px 4px #11111180;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 0 0.4rem;
+  }
+  div.switch-cont > a:hover {
+    border: 2px solid var(--accent);
+  }
+  main.right {
+    grid-area: mn;
+    padding: 4.0rem 2.6rem;
+    position: relative;
+  }
+
+  div.title-cont {
+    width: 100%;
+    background: none;
+    margin: 4.0rem 0 0;
+  }
+  div.title-cont > h1 {
+    font-size: 2.2rem;
+    color: var(--textdark);
+    margin: 0;
+    padding: 0;
+  }
+  div.title-cont > p {
+    color: var(--textsub);
+    margin: 0.6rem 0;
+    padding: 0;
+  }
+  /* ratings start */
+  .ratings-cont {
+    padding: 0.6rem 0 0.6rem;
+    box-shadow: 1px 0px 20px var(--bg);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  div.ratings-cont label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    background: none;
+    margin-right: 0.8rem;
+  }
+  div.ratings-cont input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--accent);
+    border-radius: 50px;
+    margin-bottom: 2px;
+  }
+  div.ratings-cont input[type="radio"]:checked {
+    background: var(--accent);
+  }
+  div.ratings-cont input[type="radio"]:checked ~ .ic-rate {
+    color: var(--accent);
+  }
+  /* ratings end */
+  div.desc {
+    background: none;
+    padding: 0 2.2rem 0 0;
+    text-overflow: ellipsis;
+    overflow-y: hidden;
+    max-height: 260px;
+  }
+  p#desc-p {
+    color: var(--textsub);
+    line-height: 140%;
+  }
+  div.usr-actions, div.actions-cont, div.actions-cont > a {
+    display: flex;
+    align-items: center;
+  }
+  .rating {
+    color: #caca4f;
+  }
+  div.usr-actions {
+    justify-content: space-between;
+    position: fixed;
+    bottom: 2.0rem;
+    right: 2.0rem;
+    width: 60%;
+    padding: 1.2rem 0;
+    background: none;
+  }
+  div.actions-cont {
+    background: none;
+  }
+  div.flight-hrs {
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+  }
+  div.flight-hrs > i, .flight-time {
+    color: #4c6;
+    font-weight: 300;
+  }
+   a#proceed, a#saved {
+    font: 400 1rem var(--deffont);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 2pt;
+    margin: 0 0.8rem 0 0;
+  }
+  a#proceed {
+    background: var(--accent);
+    color: var(--textwhite);
+    padding: 0.8rem 1.0rem;
+    border: 2px solid var(--accent);
+  }
+  a#saved {
+    border: 2px solid #cccccc80;
+    color: var(--textsub);
+    text-align: center;
+    padding: 0.8rem 0.4rem;
+  }
+  .ic-label {
+    margin-left: 0.4rem;
+  }
+
+/* ----------- Tablets and books ------------ */
+@media screen and (min-width: 762px) and (max-width: 990px) {
+    body {
+        display: grid;
+        grid-template: "sc mn" 100vh 
+                        / 1fr 2fr;
+    }
+    div.img-gallery {
+      bottom: 0.4rem;
+    }
+    div.switch-cont {
+      bottom: 0rem;
+      background: #11111140;
+    }
+}
+
+
+/* ----------- Mobile Devices -------------- */
+@media (max-width: 762px) {
+    body {
+        display: grid;
+        grid-template: "sc sc" auto
+                       "mn mn" auto
+                        / 2fr 2fr;
+        font: 400 0.88rem var(--fontdef);
+    }
+    section.left {
+        min-height: 30vh;
+    }
+    main.right {
+        padding: 2.0rem;
+    }
+    div.title-cont {
+      margin: 2.0rem 0 0;
+    }
+    div.title-cont > h1 {
+      font-size: 1.8rem;
+    }
+    
+    div.img-gallery {
+      bottom: 0.4rem;
+    }
+    div.switch-cont {
+      bottom: 0rem;
+      background: #11111140;
+    }
+    div.desc {
+      max-height: 140px;
+      overflow: hidden;
+    }
+    div.usr-actions {
+      left: 0;
+      padding: 0.6rem 1.2rem;
+      width: 100%;
+  }
+  }
+  /* page load Anim */
+  @keyframes docLoad {
+    0% {
+      opacity: 0;
+      transition: 1.2s;
+    }
+    100% {
+      opacity: 1.0;
+      transition: 1.2s;
+  }
+}

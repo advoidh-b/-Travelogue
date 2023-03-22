@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Advoidh Biju (Adwaith-B, Advoidh-B)">
+
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400&family=Space+Grotesk&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <title>Hotels - Travelogue</title>
+  
+  <link rel="stylesheet" href="../css/style-hotel.css">
+  
+  <!--<script src="https://kit.fontawesome.com/e1e8a204ee.js" crossorigin="anonymous">
+  </script>-->
+  
+</head>
+
+<body>
+  
+<header>
+  <nav class="nav-panel">
+    <div class="logo-container">
+      <a href="../welcome.html" class="logo">
+       Travelogue.
+      </a>
+    </div>
+    <div class="nav-profile">
+    <div class="top-nav">
+      <a href="">HOME</a>
+      <a href="">GALLERY</a>
+    </div>
+    
+    <div class="avatar" onclick="">
+      <img src="../images/dp/bean-lisa.jpg" alt="" class="">
+      <span class="material-icons avatar-ico">
+        account_circle
+      </span>
+    </div>
+
+    </div>
+    </nav>
+
+</header> 
+
+<!-- ######## Side bar ######## -->
+
+<aside>
+
+</aside>
+
+<main>
+  <section class="service-opt">
+    <p>
+      Choose a regional hotel service (Service charges include) <span style="font-weight: bold; margin-left: 0.6rem;">OR</span>
+    </p>
+    <a href="../forms/confirm.php" class="nav-label" onclick="cancelHot()">
+      Continue without service
+    </a>
+  </section>
+<section class="sec-1">
+  
+</section>
+
+<section class="sec-2">
+  
+  <div class="recc-title">
+    <span>
+      Hotels Available
+    </span>
+  </div>
+  
+  <div class="cards-container">
+    
+    <div class="cards" onclick="hotel('Hotel Blue Viking')">
+      <img src="../images/loc/hotels/hot1.jpeg" alt="1">
+      <div class="card-action">
+        <div class="loc-details">
+          <p>
+            Hotel Blue Viking
+          </p>
+
+          <span id="checkin-out">6AM - 6:30PM <span id="distance">
+            <i>
+            &nbsp;&nbsp;
+            </i>20KM</span>
+          </span>
+
+        </div>
+        
+          <a href="#" class="go-website">Official Page</a>
+        
+      </div>
+      
+
+
+    </div>
+    
+    <div class="cards" onclick="hotel('Hotel Willings')">
+      <img src="../images/loc/hotels/hot2.jpeg" alt="1">
+      <div class="card-action">
+        <div class="loc-details">
+          <p>
+            Hotel willings
+          </p>
+
+          <span id="checkin-out">4AM - 8:30PM <span id="distance">
+            <i>
+            &nbsp;&nbsp;
+            </i>27KM</span>
+          </span>
+
+        </div>
+        <a href="#" class="go-website">Official Page</a>
+      </div>
+    </div>
+    
+    <div class="cards" onclick="hotel('Hotel Radisson')">
+      <img src="../images/loc/hotels/hot3.jpeg" alt="1">
+      <div class="card-action">
+        <div class="loc-details">
+          <p>
+            Hotel Radisson
+          </p>
+
+          <span id="checkin-out">4AM - 9:30PM <span id="distance">
+            <i>
+            &nbsp;&nbsp;
+            </i>32KM</span>
+          </span>
+
+        </div>
+        <a href="#" class="go-website">Official Page</a>
+      </div>
+    </div>
+    
+    <div class="cards" onclick="hotel('Arlanda')">
+      <img src="../images/loc/hotels/hot4.jpeg" alt="1">
+      <div class="card-action">
+        <div class="loc-details">
+          <p>
+            Arlanda
+          </p>
+
+          <span id="checkin-out">5AM - 7:30PM <span id="distance">
+            <i>
+            &nbsp;&nbsp;
+            </i>46KM</span>
+          </span>
+
+        </div>
+        <a href="#" class="go-website">Official Page</a>
+      </div>
+    </div>
+    
+    <div class="cards" onclick="hotel('Duestance Hotel')">
+      <img src="../images/loc/hotels/hot5.jpeg" alt="1">
+      <div class="card-action">
+        <div class="loc-details">
+          <p>
+            Duestance Hotel
+          </p>
+
+          <span id="checkin-out">4AM - 10:30PM <span id="distance">
+            <i>
+            &nbsp;&nbsp;
+            </i>60KM</span>
+          </span>
+
+        </div>
+        <a href="#" class="go-website">Official Page</a>
+      </div>
+    </div>
+    
+  </div>
+  <!--
+  <div class="view-more-cont">
+    <a href="#" class="view-more">
+    <span>View More</span> <i class="material-icons mi-arrow">keyboard_arrow_right</i>
+    </a>
+  </div>
+-->
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-contact">
+
+    <div class="social-links">
+      <a href="#" class="">
+        Instagram
+      </a>
+
+      <a href="#" class="">
+        Facebook
+      </a>
+
+      <a href="#" class="">
+        Twitter
+      </a>
+    </div>
+
+    <div class="contact-links">
+      <a href="#" class="">
+        <i class="material-icons foot-ic">
+          phone
+        </i>
+        <span>
+          Contact
+        </span>
+      </a>
+      <a href="#" class="">
+        <i class="material-icons foot-ic">
+          email
+        </i>
+        <span>
+          Mail
+        </span>
+      </a>
+    </div>
+
+  </div>
+</footer>
+  <script type="text/javascript">
+  function hotel(hname) {
+    window.location.assign("../forms/confirm.php");
+    localStorage.setItem('hname', hname);
+ }
+ function cancelHot() {
+    localStorage.setItem('hname', 'not selected');
+ }
+  </script>
+</body>
+</html>

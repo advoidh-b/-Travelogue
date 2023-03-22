@@ -1,0 +1,97 @@
+/* *****************************
+   * Author: Advoidh B
+   * for: Travelogue(TM) 
+   * Date: 29-10-2022
+***************************** */
+* {
+    box-sizing: border-box;
+    font-family: var(--fontdef);
+  }
+  html {
+    font: 400 16px var(--fontdef);
+    scroll-behavior: smooth;
+  }
+  :root {
+    --fwhite: #fffeff;
+    --accent: #05445e;
+    --green: #4c6;
+
+    --bg: #f0f0f2;
+    --bgwhite: #fefeff;
+    --cardbg: #f8f7f8;
+    --carddark: #1B2232;
+
+    --textsub: #757785;
+    --textwhite: #efefff;
+    --textdark: #38383f;
+    --fontdef: "Figtree", sans-serif;
+  }
+  .mi-n {
+    padding-top: 3.6px;
+  }
+  body {
+    display: grid;
+    font: 400 1rem var(--fontdef);
+    background: var(--bg);
+    color: var(--textsub);
+    margin: 0;
+    padding: 0;
+  }
+  section.form-sec {
+    margin: auto;
+    display: block;
+    width: 60%;
+    padding-top: 2rem;
+  }
+  .form-sec > form {
+    padding: 2.0rem 3.0rem 4.0rem;
+    margin: auto;
+    display: block;
+    width: 56%;
+    background: #fefefe;
+    box-shadow: 1px 1px 16px #66666a40;
+    border-radius: 4pt;
+  }
+  h1 {
+    font: 400 1.6rem sans-serif;
+    color: #444;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  form label {
+    display: inline-block;
+    font-size: 0.8rem;
+  }
+  div.ip-rows {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  div.ip-cont {
+    margin: 0.6rem;
+  }
+  .ip {
+    padding: 0.6rem 1.2rem;
+    margin: 0.2rem 0 0.8rem;
+    background: var(--textwhite);
+    border: 1px solid #33333320;
+    border-radius: 2pt;
+  }
+  .ip-block {
+    display: block;
+  }
+  button.pay {
+    padding: 0.6rem 1.2rem;
+    margin: 0 0.6rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 2pt;
+    color: var(--textwhite);
+  }
+@media (max-width: 762px) {
+    section.form-sec {
+        width: 90%;
+    }
+    .form-sec > form {
+        width: 100%;
+    }
+}
