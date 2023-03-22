@@ -2,4 +2,5 @@
 Languages: Javascript, PHP, CSS3 (no frameworks)
 Note: This is a static deployment and supports no dynamic functions.
 
-![View Deployment](https://img.shields.io/badge/View Deployment-%23323330.svg?style=flat&logo=html&logoColor=%231572B6)(https://advoidh-b.github.io/-Travelogue/welcome.html)
+
+[![LinkedIn](https://img.shields.io/badge/View-Deployment-%230077B5.svg?logo=html&logoColor=white)](https://advoidh-b.github.io/-Travelogue/welcome.html)
